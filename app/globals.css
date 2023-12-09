@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT */
+@font-face {
+  font-family: "LINESeed_Thin";
+  src: url("/fonts/LINESeedSansTH_W_Th.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LINESeed_Regular";
+  src: url("/fonts/LINESeedSansTH_W_Rg.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LINESeed_Bold";
+  src: url("/fonts/LINESeedSansTH_W_Bd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LINESeed_ExtraBold";
+  src: url("/fonts/LINESeedSansTH_W_XBd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LINESeed_Hevy";
+  src: url("/fonts/LINESeedSansTH_W_He.woff2") format("woff2");
+}
+
+@layer base {
+  body {
+    font-family: "LINESeed_Thin", "LINESeed_Regular", "LINESeed_Bold",
+      "LINESeed_ExtraBold", "LINESeed_Hevy", sans-serif;
+    background-color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply ml-[1.5rem] mr-[1.5rem] max-w-[1230px] lg:m-auto;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
