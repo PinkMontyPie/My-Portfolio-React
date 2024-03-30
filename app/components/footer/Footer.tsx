@@ -48,34 +48,36 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="container w-full h-auto bg-slate-200 flex flex-col">
-        <div className="flex justify-between items-center pt-10">
-          <div>
-            <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
-            <h1>one plus one = two</h1>
-            <div className="pt-3 flex gap-3">
-              {Social.map((option, index) => (
-                <Link href={option.url} key={index}>
-                  <h1 className="text-xl cursor-pointer">
-                    <FontAwesomeIcon icon={option.label} style={{ color: "#293144", }} />
-                  </h1>
-                </Link>
-              ))}
+      <div className="w-full h-auto bg-slate-200">
+        <div className="container flex flex-col">
+          <div className="flex justify-between items-center pt-10">
+            <div>
+              <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
+              <h1>one plus one = two</h1>
+              <div className="pt-3 flex gap-3">
+                {Social.map((option, index) => (
+                  <Link href={option.url} key={index}>
+                    <h1 className="text-xl cursor-pointer">
+                      <FontAwesomeIcon icon={option.label} style={{ color: "#293144", }} />
+                    </h1>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="flex">
+              <div className="flex gap-3">
+                {nav.map((option, index) => (
+                  <Link href={option.url} key={index}>
+                    <h1 className="text-base text-[#293144] cursor-pointer hover:underline">{option.label}</h1>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="flex">
-            <div className="flex gap-3">
-              {nav.map((option, index) => (
-                <Link href={option.url} key={index}>
-                  <h1 className="text-base text-[#293144] cursor-pointer hover:underline">{option.label}</h1>
-                </Link>
-              ))}
-            </div>
+          <div className="divider"></div>
+          <div className="pb-8">
+            <h1>© 2024 PortPai. All rights reserved.</h1>
           </div>
-        </div>
-        <div className="divider"></div>
-        <div className="pb-8">
-          <h1>© 2024 PortPai. All rights reserved.</h1>
         </div>
       </div>
     </footer>
