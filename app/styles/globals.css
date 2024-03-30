@@ -38,7 +38,7 @@
 
 @layer utilities {
   .container {
-    @apply ml-[1.5rem] mr-[1.5rem] max-w-[1230px] lg:m-auto;
+    @apply px-8 sm:px-12 max-w-[1240px] lg:m-auto;
   }
 
   html {
