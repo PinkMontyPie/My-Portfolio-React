@@ -24,7 +24,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="font-line-Regular text-white">
-      <div className="container h-[100px] bg-slate-200 flex items-center justify-between">
+      <div className="container h-[90px] bg-slate-200 flex items-center justify-between">
         <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
         <div className="flex gap-3 items-center">
           {nav.map((option, index) => (
