@@ -5,7 +5,8 @@ import Hero from "./components/landing/Hero";
 
 export default function Home() {
   return (
-    <main className="font-line-bold text-black h-screen">
-    </main>
+    <main className="font-line-bold text-black">
+      <Hero />
+    </main >
   );
 }
