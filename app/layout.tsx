@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import '/app/styles/globals.css';
+import '@/app/styles/globals.css';
 import NavigationBar from './components/navbar/NavigationBar';
 import Footer from './components/footer/Footer';
 
@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavigationBar />
+        <div className='absolute w-full'>
+          <NavigationBar />
+        </div>
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
