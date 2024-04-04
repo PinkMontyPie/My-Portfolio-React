@@ -22,9 +22,9 @@ export default function Home() {
       <section id="works" className="z-30">
         <WorksPage />
       </section>
-      <section id="contact" className="z-40">
+      {/* <section id="contact" className="z-40">
         <ContactPage />
-      </section>
+      </section> */}
     </main >
   );
 }
