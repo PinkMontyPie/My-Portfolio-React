@@ -10,24 +10,20 @@ const Footer = () => {
 
   const nav = [
     {
-      label: "Home",
-      url: "/account/profile",
-    },
-    {
       label: "About",
-      url: "/account/course-progress",
+      url: "#about",
     },
     {
-      label: "skills",
-      url: "/account/course-progress",
+      label: "Skills",
+      url: "#skills",
     },
     {
-      label: "Work",
-      url: "/account/course-progress",
+      label: "Works",
+      url: "#works",
     },
     {
       label: "Contact",
-      url: "/account/course-progress",
+      url: "#contact",
     },
   ];
 
@@ -65,7 +61,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 {nav.map((option, index) => (
                   <Link href={option.url} key={index}>
                     <h1 className="text-base text-[#293144] cursor-pointer hover:underline">{option.label}</h1>

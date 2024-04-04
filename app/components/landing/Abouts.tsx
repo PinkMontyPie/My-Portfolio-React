@@ -40,6 +40,7 @@ const AboutPage = () => {
           </div>
         </div>
 
+
         <div className="flex gap-3">
           {Social.map((option, index) => (
             <Link href={option.url} key={index}>
