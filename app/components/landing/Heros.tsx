@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -13,7 +14,7 @@ const HeroPage = () => {
             <h1 className="text-3xl">I&apos;m Soravith Puvekit</h1>
           </div>
           <div className="w-full flex justify-center">
-            <div className="w-auto py-3 px-5 bg-[#00c7fd] rounded-xl">
+            <div className="w-auto py-3 px-5 bg-blue-500 text-white rounded-lg">
               <h1 className="text-base">Welcome to my portfolio</h1>
 
             </div>
