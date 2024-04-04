@@ -10,21 +10,20 @@ import ContactPage from "./components/landing/Contact";
 export default function Home() {
   return (
     <main className="font-line-bold text-black">
-      <div className="" >
+      <div style={{ position: "relative", zIndex: 0 }}>
         <HeroPage />
       </div>
-      <section id="about" className="z-10">
-        <AboutPage />
-      </section>
-      <section id="skills" className="z-20">
-        <SkillPage />
-      </section>
-      <section id="works" className="z-30">
-        <WorksPage />
-      </section>
-      {/* <section id="contact" className="z-40">
-        <ContactPage />
-      </section> */}
-    </main >
+      <div style={{ position: "relative", zIndex: 10 }}>
+        <section id="about">
+          <AboutPage />
+        </section>
+        <section id="skills">
+          <SkillPage />
+        </section>
+        <section id="works">
+          <WorksPage />
+        </section>
+      </div>
+    </main>
   );
 }

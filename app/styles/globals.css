@@ -44,6 +44,12 @@
   html {
     scroll-behavior: smooth;
   }
+
+  .custom-bg-image {
+    background-image: url("/images/BGblue.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 :root {

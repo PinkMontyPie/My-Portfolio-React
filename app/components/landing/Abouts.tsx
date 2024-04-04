@@ -50,7 +50,7 @@ const AboutPage = () => {
             </Link>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-10 pt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-5">
           <img src="images/img1.jpg" alt="" className="rounded-xl w-full h-[500px] object-cover object-center" />
           <img src="images/1677465294777.jpg" alt="" className="rounded-xl w-full h-[500px] object-cover object-center" />
         </div>

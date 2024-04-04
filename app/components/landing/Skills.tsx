@@ -2,18 +2,18 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3Alt, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faFilm, faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 
 const SkillPage = () => {
 
   return (
     <main className="font-line-bold text-black h-auto bg-white">
       <div className="container py-20 flex flex-col gap-5 ">
-        <h1 className="text-4xl">Skills</h1>
-        <p className="font-line-Regular">This is my skill that I obtained in the past three years.</p>
+        <h1 className="text-4xl"> Skills</h1>
+        <p className="font-line-Regular">This is my skills that I obtained in the past three years.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full ">
           <div className="w-auto card-body bg-slate-200 rounded-lg">
-            <h1 className="text-2xl flex gap-3 items-center">Font-end developer</h1>
+            <h1 className="text-2xl flex gap-3 items-center"><FontAwesomeIcon icon={faCode} style={{color: "#3b82f6",}} /> Font-end developer</h1>
             <div className="flex pt-5 gap-10">
               <h1 className="w-auto text-xl">
                 Skills
@@ -25,13 +25,14 @@ const SkillPage = () => {
                 <span>Node.js</span>
                 <span>Next.js</span>
                 <span>Tailwind CSS</span>
+                <span>Git</span>
                 <span>HTML</span>
                 <span>CSS</span>
               </h1>
             </div>
           </div>
           <div className="w-auto card-body bg-slate-200 rounded-lg">
-            <h1 className="text-2xl">UI/UX Design</h1>
+            <h1 className="text-2xl"><FontAwesomeIcon icon={faLayerGroup} style={{color: "#3b82f6",}} /> UI/UX Design</h1>
             <div className="flex pt-5 gap-10">
               <h1 className="w-auto font-line-bold text-xl">
                 Skills
@@ -44,7 +45,7 @@ const SkillPage = () => {
             </div>
           </div>
           <div className="w-auto card-body bg-slate-200 rounded-lg">
-            <h1 className="text-2xl">Motion Graphic</h1>
+            <h1 className="text-2xl"><FontAwesomeIcon icon={faFilm} style={{color: "#3b82f6",}} /> Motion Graphic</h1>
             <div className="flex pt-5 gap-10">
               <h1 className="w-auto font-line-bold text-xl">
                 Skills

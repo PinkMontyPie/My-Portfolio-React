@@ -8,6 +8,7 @@ interface Work {
   type: string[];
   title: string;
   description: string;
+  maindescription: string;
   role: string[];
   url: string;
 }
@@ -33,6 +34,7 @@ const WorksPage: React.FC = () => {
       type: ["Web Development"],
       title: "Coding for Metaverse",
       description: "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
+      maindescription: "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
       role: ["Font-end developer", "UI/UX Design"],
       url: "https://codingformetaverse.com/",
     },
@@ -41,6 +43,7 @@ const WorksPage: React.FC = () => {
       type: ["Microsoft", "Student Ambassador"],
       title: "Microsoft Learn Student Ambassador",
       description: "MLSA is a program by Microsoft to help student to learn and grow in technology field.",
+      maindescription: "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
       role: ["Student", "Student Ambassador"],
       url: "https://mvp.microsoft.com/en-US/studentambassadors/profile/f7f6c0fc-bffc-417e-808a-4f97e00313c5",
     },
@@ -48,7 +51,8 @@ const WorksPage: React.FC = () => {
       image: "images/Work/pypathway.jpg",
       type: ["Event", "Workshop"],
       title: "Python Developer Pathway Be Inspired session workshop by MLSA ",
-      description: "If a dog chews shoes whose shoes does he choose?",
+      description: "let's learn and grow in technology field together.",
+      maindescription: "What a great day!!! Today is an incredible day as I've been given the fantastic opportunity to serve as both a host and speaker for the Python Developer Pathway Be Inspired session workshop organized by Microsoft Learn Student Ambassadors and held at the Bangkok University Open House. I'm thankful for this chance to engage and share insights about Microsoft Learn Student Ambassadors and Introduction to Python with fellow young students. I'm also looking forward to inspiring and engaging fellow enthusiasts in the world of Python development in the next pathway!",
       role: ["Speaker"],
       url: "https://codingformetaverse.com/",
     },
@@ -56,7 +60,8 @@ const WorksPage: React.FC = () => {
       image: "images/Work/Workta.jpg",
       type: ["Event", "Workshop"],
       title: "Python Developer Pathway (The First Chapter : Be Inspired)",
-      description: "If a dog chews shoes whose shoes does he choose?",
+      description: "This event is tailored for first-year students who are passionate about coding, marking the exciting beginning of their coding journey.",
+      maindescription: "This event is tailored for first-year students who are passionate about coding, marking the exciting beginning of their coding journey.",
       role: ["Teaching Assistant"],
       url: "https://codingformetaverse.com/",
     },
@@ -64,7 +69,8 @@ const WorksPage: React.FC = () => {
       image: "images/Work/Kit.jpg",
       type: ["Student exchange"],
       title: "BUxKAIT 2024",
-      description: "If a dog chews shoes whose shoes does he choose?",
+      description: "This is a student exchange program between Bangkok University and Kanagawa Institute of Technology.",
+      maindescription: "BUxKAIT 2024 project has concluded, and it was an incredibly enjoyable month. We traveled together, learned new things, engaged in activities, played sports and games, ate together.",
       role: ["Student Assistant", "Buddy"],
       url: "https://codingformetaverse.com/",
     },
@@ -132,7 +138,7 @@ const WorksPage: React.FC = () => {
                       {option.title}
                     </h2>
                     <div className="pb-5 pt-2 flex flex-col flex-grow justify-end gap-5">
-                      <p className="font-line-Regular">{option.description}</p>
+                      <p className="font-line-Regular">{option.maindescription}</p>
                       <div className="flex gap-3">
                         <h1>Role</h1>
                         <div className="flex flex-col card-actions gap-3">
@@ -142,7 +148,7 @@ const WorksPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <Link href={option.url}>
+                    <Link href={option.url} target="_blank" rel="noopener noreferrer">
                       <p className="font-line-Regular btn bg-white text-gray-700 hover:bg-slate-100  border-none">More information</p>
                     </Link>
                   </div>
