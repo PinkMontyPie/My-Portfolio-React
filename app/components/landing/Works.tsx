@@ -53,7 +53,7 @@ const WorksPage: React.FC = () => {
       title: "Python Developer Pathway Be Inspired session workshop by MLSA ",
       description: "let's learn and grow in technology field together.",
       maindescription: "What a great day!!! Today is an incredible day as I've been given the fantastic opportunity to serve as both a host and speaker for the Python Developer Pathway Be Inspired session workshop organized by Microsoft Learn Student Ambassadors and held at the Bangkok University Open House. I'm thankful for this chance to engage and share insights about Microsoft Learn Student Ambassadors and Introduction to Python with fellow young students. I'm also looking forward to inspiring and engaging fellow enthusiasts in the world of Python development in the next pathway!",
-      role: ["Speaker"],
+      role: ["Speaker","Teacher Assistant"],
       url: "https://codingformetaverse.com/",
     },
     {
