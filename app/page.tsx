@@ -7,6 +7,7 @@ import SkillPage from "./components/landing/Skills";
 import WorksPage from "./components/landing/Works";
 import ContactPage from "./components/landing/Contact";
 
+
 export default function Home() {
   return (
     <main className="font-line-bold text-black">
