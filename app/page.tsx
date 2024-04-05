@@ -14,7 +14,7 @@ export default function Home() {
       <div style={{ position: "relative", zIndex: 0 }}>
         <HeroPage />
       </div>
-      
+
       <div style={{ position: "relative", zIndex: 10 }}>
         <section id="about">
           <AboutPage />
@@ -24,6 +24,9 @@ export default function Home() {
         </section>
         <section id="works">
           <WorksPage />
+        </section>
+        <section id="contact">
+          <ContactPage />
         </section>
       </div>
     </main>
