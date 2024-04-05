@@ -14,6 +14,7 @@ export default function Home() {
       <div style={{ position: "relative", zIndex: 0 }}>
         <HeroPage />
       </div>
+      
       <div style={{ position: "relative", zIndex: 10 }}>
         <section id="about">
           <AboutPage />
