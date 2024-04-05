@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="flex justify-between items-center pt-10">
             <div>
               <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
-              <h1>one plus one = two</h1>
+              <h1>one plus one = one + one</h1>
               <div className="pt-3 flex gap-3">
                 {Social.map((option, index) => (
                   <Link href={option.url} key={index}>
