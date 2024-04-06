@@ -1855,10 +1855,10 @@ node-releases@^2.0.14:
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.14.tgz"
   integrity sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==
 
-node@^18.20.1:
-  version "18.20.1"
-  resolved "https://registry.npmjs.org/node/-/node-18.20.1.tgz"
-  integrity sha512-AJQcU7zZY7iFt7JD0zJ1Ih+bnrm2LtCy21kaI5/eBSxx8n3uOqGitiM3SWDh6319+00aElNQIWs/AbrRXAr82g==
+node@^20:
+  version "20.12.1"
+  resolved "https://registry.yarnpkg.com/node/-/node-20.12.1.tgz#795d1987159aa5b75341819aebdf7090df221a1b"
+  integrity sha512-xu4A4NQ9k1IAhe7vhtti/rtm4rvEAR5cs2c9xTEVyXBauwDBcab+Mc0yu3kiBWrvWgFRTIE3K1cB3HOrzUx+3w==
   dependencies:
     node-bin-setup "^1.0.0"
 
@@ -2332,6 +2332,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
