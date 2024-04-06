@@ -33,7 +33,7 @@ const ContactPage = () => {
         </div>
         <div className="py-20 flex flex-col items-center gap-5 ">
           <h1 className="text-4xl">Contact</h1>
-          <p className="font-line-Regular">let's Get in touch!</p>
+          <p className="font-line-Regular">let&apos;s Get in touch!</p>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div className="flex pt-5 gap-10">
               <h1 className="w-auto text-xl">
