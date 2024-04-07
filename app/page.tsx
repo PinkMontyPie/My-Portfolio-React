@@ -8,6 +8,7 @@ import ContactPage from "./components/landing/Contact";
 
 
 export default function Home() {
+
   return (
     <main className="font-line-bold text-black">
       <div style={{ position: "relative", zIndex: 0 }}>
