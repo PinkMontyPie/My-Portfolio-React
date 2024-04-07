@@ -21,19 +21,13 @@ jobs:
         run: |
           docker build -t portpai .
           docker tag portpai:latest portpai.azurecr.io/portpai:latest
-
-      - name: Debug
-        run: |
-          echo "ACR_USERNAME: ${{ secrets.ACR_USERNAME }}"
-          echo "ACR_PASSWORD: ${{ secrets.ACR_PASSWORD }}"
-          echo "Login server: ${{ secrets.ACR_USERNAME }}"
-
+          
       - name: Push Docker image to Azure Container Registry
         uses: azure/docker-login@v1
         with:
-          login-server: ${{ secrets.ACR_USERNAME }}
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          login-server: portpai.azurecr.io
+          username: portpai
+          password: aTlwALu53/hdOJKW5n9CXk/31K7K3rmri5VXLqTKUu+ACRDme9SQ
 
       - name: Push Docker image
         run: docker push portpai.azurecr.io/portpai:latest
