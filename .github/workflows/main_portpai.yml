@@ -28,8 +28,8 @@ jobs:
           login-server: ${{ secrets.ACR_USERNAME }}
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
-      - run: docker tag portpai portpai.azurecr.io.azurecr.io/portpai:latest
-      - run: docker push portpai.azurecr.io.azurecr.io/portpai:latest
+      - run: docker tag portpai.azurecr.io/portpai:latest
+      - run: docker push portpai.azurecr.io/portpai:latest
 
   deploy:
     runs-on: ubuntu-latest
