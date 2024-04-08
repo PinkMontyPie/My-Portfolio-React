@@ -25,8 +25,8 @@ const HeroPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-grow items-end w-[600px] h-auto">
-            <img src="/images/yes.png" alt="hero" className="object-cover object-center" />
+          <div className="flex flex-grow items-end object-cover object-center">
+            <img src="/images/yes.png" alt="hero" className="w-[600px] h-auto" />
           </div>
           
         </div>
