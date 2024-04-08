@@ -27,7 +27,7 @@ const ContactPage = () => {
 
   return (
     <main className="font-line-bold text-black h-auto bg-white flex justify-center container">
-      <div className="flex grid-cols-3">
+      <div className="flex grid-cols-3 gap-5">
         <div className="md:flex justify-center items-center hidden">
           <img src="/images/3d/Saly-1.png" alt="hero" className="w-[300px] h-auto" />
         </div>
@@ -36,7 +36,7 @@ const ContactPage = () => {
           <p className="font-line-Regular">let&apos;s Get in touch!</p>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div className="flex pt-5 gap-10">
-              <h1 className="w-auto text-xl">
+              <h1 className="w-24 text-xl">
                 Contact
               </h1>
               <h1 className="flex flex-col gap-3 font-line-Regular">
@@ -46,7 +46,7 @@ const ContactPage = () => {
               </h1>
             </div>
             <div className="flex pt-5 gap-10">
-              <h1 className="w-auto text-xl">
+              <h1 className="w-24 text-xl">
                 Social
               </h1>
               <h1 className="flex flex-col gap-3 font-line-Regular">

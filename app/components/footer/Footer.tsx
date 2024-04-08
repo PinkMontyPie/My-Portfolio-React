@@ -48,9 +48,11 @@ const Footer = () => {
         <div className="container flex flex-col">
           <div className="flex justify-between items-center pt-10">
             <div>
-              <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
-              <h1>one plus one = one + one</h1>
-              <div className="pt-3 flex gap-3">
+              <div>
+                <img src="icon/logo.png" alt="logo" className="w-auto h-7 lg:h-9" />
+              </div>
+              <h1 className="text-xs lg:text-base">one plus one = one + one</h1>
+              <div className="pt-1 lg:pt-2 flex gap-3">
                 {Social.map((option, index) => (
                   <Link href={option.url} key={index}>
                     <h1 className="text-xl cursor-pointer">
@@ -64,7 +66,7 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row gap-3">
                 {nav.map((option, index) => (
                   <Link href={option.url} key={index}>
-                    <h1 className="text-base text-[#293144] cursor-pointer hover:underline">{option.label}</h1>
+                    <h1 className="text-xs lg:text-base text-[#293144] cursor-pointer hover:underline">{option.label}</h1>
                   </Link>
                 ))}
               </div>
@@ -72,7 +74,7 @@ const Footer = () => {
           </div>
           <div className="divider"></div>
           <div className="pb-8">
-            <h1>© 2024 PortPai. All rights reserved.</h1>
+            <h1 className="text-xs lg:text-base">© 2024 PortPai. All rights reserved.</h1>
           </div>
         </div>
       </div>
