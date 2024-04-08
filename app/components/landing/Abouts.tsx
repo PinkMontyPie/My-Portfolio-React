@@ -26,7 +26,9 @@ const AboutPage = () => {
         <h1 className="text-4xl">About me</h1>
         <p className="font-line-Regular">Hey there, everyone! I&apos;m Soravith Puvekit, but you can just call me Pai. I&apos;m a Computer Science student at Bangkok University <br />and a proud Microsoft Learn Student Ambassador. My passion? Becoming a skilled full-stack developer! Let&apos;s dive into the world of coding together!</p>
         <div className="flex gap-5 items-start pt-5">
-          <h1 className="text-xl w-28">Role</h1>
+          <div className="w-24 flex flex-shrink-0">
+            <h1 className="text-xl">Role</h1>
+          </div>
           <div>
             <p className="font-line-Regular">Front-end development</p>
             <p className="font-line-Regular">UX/UI design</p>
@@ -34,7 +36,10 @@ const AboutPage = () => {
         </div>
 
         <div className="flex gap-5 items-start pb-5">
-          <h1 className="text-xl w-28">Awards</h1>
+          <div className="w-24 flex flex-shrink-0">
+            <h1 className="text-xl">Awards</h1>
+          </div>
+
           <div>
             <p className="font-line-Regular">Microsoft Learn Student Ambassador</p>
           </div>

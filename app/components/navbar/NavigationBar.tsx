@@ -29,7 +29,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="font-line-Regular text-white">
-      <div className="h-[90px] bg-slate-200 z-0">
+      <div className="h-[80px] lg:h-[90px] bg-slate-200 z-0">
         <div className="container h-full flex items-center justify-between">
           <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
           <div className="drawer-content lg:hidden">
