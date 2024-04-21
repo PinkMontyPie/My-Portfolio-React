@@ -6,7 +6,6 @@ import SkillPage from "./components/landing/Skills";
 import WorksPage from "./components/landing/Works";
 import ContactPage from "./components/landing/Contact";
 
-
 export default function Home() {
 
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <div style={{ position: "relative", zIndex: 0 }}>
         <HeroPage />
       </div>
-      
       <div style={{ position: "relative", zIndex: 10 }}>
         <section id="about">
           <AboutPage />

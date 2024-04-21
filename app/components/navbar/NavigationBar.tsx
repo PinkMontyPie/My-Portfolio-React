@@ -29,7 +29,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="font-line-Regular text-white">
-      <div className="h-[80px] lg:h-[90px] bg-slate-200 z-0">
+      <div className="bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-slate-200 z-0 ">
         <div className="container h-full flex items-center justify-between">
           <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
           <div className="drawer-content lg:hidden">
@@ -43,7 +43,7 @@ const NavigationBar = () => {
           <div className="hidden lg:flex gap-3 items-center">
             {nav.map((option, index) => (
               <Link href={option.url} key={index}>
-                <div className="btn text-base text-[#293144] hover:bg-slate-300 bg-slate-200 border-none shadow-none rounded-md">
+                <div className="btn text-base text-[#293144] hover:bg-white hover:bg-opacity-30 bg-transparent border-none shadow-none rounded-md">
                   {option.label}
                 </div>
               </Link>
