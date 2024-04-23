@@ -11,7 +11,7 @@ COPY . /usr/src
 RUN yarn install
 RUN yarn build
 
-EXPOSE 8080
+EXPOSE 3000
 
 ENV DEBUG=true
 
