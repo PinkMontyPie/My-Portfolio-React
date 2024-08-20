@@ -51,7 +51,6 @@ const Footer = () => {
               <div>
                 <img src="icon/logo.png" alt="logo" className="w-auto h-7 lg:h-9" />
               </div>
-              <h1 className="text-xs lg:text-base">one plus one = one + one</h1>
               <div className="pt-1 lg:pt-2 flex gap-3">
                 {Social.map((option, index) => (
                   <Link href={option.url} key={index}>

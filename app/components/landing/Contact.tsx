@@ -35,8 +35,8 @@ const ContactPage = () => {
           <h1 className="text-4xl">Contact</h1>
           <p className="font-line-Regular">let&apos;s Get in touch!</p>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
-            <div className="flex pt-5 gap-10">
-              <h1 className="w-24 text-xl">
+            <div className="flex pt-5 gap-8">
+              <h1 className="w-20 text-xl">
                 Contact
               </h1>
               <h1 className="flex flex-col gap-3 font-line-Regular">
@@ -45,8 +45,8 @@ const ContactPage = () => {
                 <span>095 361 6514</span>
               </h1>
             </div>
-            <div className="flex pt-5 gap-10">
-              <h1 className="w-24 text-xl">
+            <div className="flex pt-5 gap-8">
+              <h1 className="w-20 text-xl">
                 Social
               </h1>
               <h1 className="flex flex-col gap-3 font-line-Regular">
