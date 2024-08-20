@@ -6,8 +6,8 @@ import React, { useEffect, useState } from "react";
 const HeroPage = () => {
   return (
     <main className="font-line-bold text-black bg-slate-200 ">
-      <div className="pt-24">
-        <div className="grid grid-cols-1 lg:grid-cols-3 flex-col h-auto md:px-16 custom-bg-image container rounded-[50px]">
+      <div className="pt-24 px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 flex-col h-auto md:px-16 custom-bg-image container rounded-3xl">
           <div className="lg:flex justify-center items-center hidden py-20">
             <img
               src="/images/3d/Saly-18.png"
@@ -15,7 +15,7 @@ const HeroPage = () => {
               className="w-[500px] h-auto"
             />
           </div>
-          <div className="lg:flex justify-center items-center hidden py-20">
+          <div className="lg:flex justify-center items-center py-20">
             <img
               src="/icon/Portpai.png"
               alt="hero"
