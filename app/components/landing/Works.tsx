@@ -74,6 +74,15 @@ const WorksPage: React.FC = () => {
       role: ["Student Assistant", "Buddy"],
       url: "https://codingformetaverse.com/",
     },
+    {
+      image: "images/Work/S__74948618.jpg",
+      type: ["Event", "Workshop"],
+      title: "BU Open House 2024",
+      description: "BU Open House 2024 workshop on full-stack web development",
+      maindescription: "What an incredible day! I had the fantastic opportunity to serve as both a host and speaker at the BU Open House 2024 workshop on full-stack web development. As someone who has been immersed in front-end development, Im truly grateful for the chance to share my insights and experiences with the next generation of aspiring developers. A heartfelt thank you to the professors, the organizing team, fellow speakers, TAs, and everyone involved in making this event such a success. Your hard work and dedication truly made a difference! 😊",
+      role: ["Speaker", "Teacher Assistant"],
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7236725261797314561/",
+    },
   ];
 
   const filteredWorks = activeFilter
