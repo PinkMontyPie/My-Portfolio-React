@@ -65,16 +65,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-.experiences-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.experience-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 10px;
-}

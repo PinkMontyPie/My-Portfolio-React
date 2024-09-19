@@ -45,7 +45,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="flex gap-5 items-start pb-5">
+        <div className="flex gap-5 items-start pb-6">
           <div className="w-32 flex flex-shrink-0">
             <h1 className="text-xl">Awards</h1>
           </div>
@@ -65,72 +65,54 @@ const AboutPage = () => {
           <ul className="steps steps-vertical">
             <li className="step">
               <div className="flex flex-col w-full pl-[20px] pb-5">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-5">
+                <div className="flex flex-col justify-start items-start gap-[5px] pb-3">
                   <div className="font-bold">Front-End Engineer</div>
                   <div className="font-line-Regular">HDmall</div>
                 </div>
-                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start">
+                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start leading-relaxed">
                   <li>
-                    Develop and design a B2B website for HDmall, resulting in an
-                    increase of over 100 customers in the past 3 months.{" "}
+                    Developed and designed a B2B website,{" "}
+                    <strong>acquiring 100+ new customers in 3 months.</strong>
                   </li>
                   <li>
-                    Create an internal tool to streamline company operations,
-                    boosting marketing team productivity by 50%.
+                    Created internal tools that{" "}
+                    <strong> boosted marketing productivity by 50%,</strong>{" "}
+                    automating HTML page generation for campaigns.
+                  </li>
+                  <li>
+                    <strong>
+                      Designed and implemented a new Campaign and Highlights
+                      page for HDmall.co.th,
+                    </strong>{" "}
+                    increasing customer engagement by showcasing ongoing
+                    promotions and featured products.
                   </li>
                 </ul>
               </div>
             </li>
             <li className="step">
-              <div className="flex flex-col w-full pl-[20px] pb-5">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-5">
-                  <div className="font-bold">Front-End Engineer</div>
-                  <div className="font-line-Regular">HDmall</div>
+              <div className="flex flex-col w-full pl-[20px] pb-6">
+                <div className="flex flex-col justify-start items-start gap-[5px] pb-3">
+                  <div className="font-bold">
+                    Full-stack Developer / UX-UI Designer
+                  </div>
+                  <div className="font-line-Regular">
+                    Center of Specialty Innovation (CoSI)
+                  </div>
                 </div>
                 <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start">
                   <li>
-                    Develop and design a B2B website for HDmall, resulting in an
-                    increase of over 100 customers in the past 3 months.{" "}
+                    <strong>Led website development and UI/UX design</strong>{" "}
+                    using modern front-end frameworks{" "}
+                    <strong>
+                      (React, Next.js, etc.), improving user engagement by 25%.
+                    </strong>
                   </li>
                   <li>
-                    Create an internal tool to streamline company operations,
-                    boosting marketing team productivity by 50%.
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="step">
-              <div className="flex flex-col w-full pl-[20px] pb-5">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-5">
-                  <div className="font-bold">Front-End Engineer</div>
-                  <div className="font-line-Regular">HDmall</div>
-                </div>
-                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start">
-                  <li>
-                    Develop and design a B2B website for HDmall, resulting in an
-                    increase of over 100 customers in the past 3 months.{" "}
-                  </li>
-                  <li>
-                    Create an internal tool to streamline company operations,
-                    boosting marketing team productivity by 50%.
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="step">
-              <div className="flex flex-col w-full pl-[20px] pb-5">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-5">
-                  <div className="font-bold">Front-End Engineer</div>
-                  <div className="font-line-Regular">HDmall</div>
-                </div>
-                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start">
-                  <li>
-                    Develop and design a B2B website for HDmall, resulting in an
-                    increase of over 100 customers in the past 3 months.{" "}
-                  </li>
-                  <li>
-                    Create an internal tool to streamline company operations,
-                    boosting marketing team productivity by 50%.
+                    Managed version control and implemented{" "}
+                    <strong>CI/CD pipelines</strong>
+                    using <strong>GitHub</strong>,
+                    <strong> reducing deployment time by 30%.</strong>
                   </li>
                 </ul>
               </div>
