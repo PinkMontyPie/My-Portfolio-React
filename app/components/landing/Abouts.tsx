@@ -57,13 +57,13 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="flex gap-5 items-start pb-5">
+        {/* <div className="flex flex-col md:flex-row gap-5 items-start pb-5">
           <div className="w-32 flex flex-shrink-0">
             <h1 className="text-xl">Experience</h1>
           </div>
 
           <ul className="steps steps-vertical">
-            <li className="step">
+            <li className="step flex justify-start">
               <div className="flex flex-col w-full pl-[20px] pb-5">
                 <div className="flex flex-col justify-start items-start gap-[5px] pb-3">
                   <div className="font-bold">Front-End Engineer</div>
@@ -118,7 +118,7 @@ const AboutPage = () => {
               </div>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="flex gap-3">
           {Social.map((option, index) => (

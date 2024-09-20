@@ -65,3 +65,17 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
+.animate-class {
+  opacity: 0;
+  scale: 0.9;
+  transition: all 0.8s ease;
+  transform: translateY(50px);
+}
+
+.show {
+  opacity: 1;
+  scale: 1;
+  transform: translateY(0);
+}
