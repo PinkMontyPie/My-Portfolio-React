@@ -55,7 +55,7 @@ const HeroPage = () => {
           <div className="bg-[#ffffff] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-2">
             Hi I&apos;m Pai👋
           </div>
-          <h1 className="text-center font-line-bold text-2xl lg:text-6xl leading-normal lg:leading-loose animate-class delay-3">
+          <h1 className="text-center font-line-bold text-2xl lg:text-6xl leading-normal animate-class delay-3">
             I design and build website <br /> that look good
           </h1>
           <div className="flex flex-row gap-5 lg:pt-8 animate-class delay-4">
