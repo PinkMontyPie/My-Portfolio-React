@@ -1,0 +1,56 @@
+[
+  {
+    "image": "images/Work/CFM.png",
+    "type": ["Web Development"],
+    "title": "Coding for Metaverse",
+    "description": "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
+    "maindescription": "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
+    "role": ["Font-end developer", "UI/UX Design"],
+    "url": "https://codingformetaverse.com/"
+  },
+  {
+    "image": "images/Work/MLSA.png",
+    "type": ["Microsoft", "Student Ambassador"],
+    "title": "Microsoft Learn Student Ambassador",
+    "description": "MLSA is a program by Microsoft to help student to learn and grow in technology field.",
+    "maindescription": "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
+    "role": ["Student", "Student Ambassador"],
+    "url": "https://mvp.microsoft.com/en-US/studentambassadors/profile/f7f6c0fc-bffc-417e-808a-4f97e00313c5"
+  },
+  {
+    "image": "images/Work/pypathway.jpg",
+    "type": ["Event", "Workshop"],
+    "title": "Python Developer Pathway Be Inspired session workshop by MLSA ",
+    "description": "let's learn and grow in technology field together.",
+    "maindescription": "What a great day!!! Today is an incredible day as I've been given the fantastic opportunity to serve as both a host and speaker for the Python Developer Pathway Be Inspired session workshop organized by Microsoft Learn Student Ambassadors and held at the Bangkok University Open House. I'm thankful for this chance to engage and share insights about Microsoft Learn Student Ambassadors and Introduction to Python with fellow young students. I'm also looking forward to inspiring and engaging fellow enthusiasts in the world of Python development in the next pathway!",
+    "role": ["Speaker", "Teacher Assistant"],
+    "url": "https://codingformetaverse.com/"
+  },
+  {
+    "image": "images/Work/Workta.jpg",
+    "type": ["Event", "Workshop"],
+    "title": "Python Developer Pathway (The First Chapter : Be Inspired)",
+    "description": "This event is tailored for first-year students who are passionate about coding, marking the exciting beginning of their coding journey.",
+    "maindescription": "This event is tailored for first-year students who are passionate about coding, marking the exciting beginning of their coding journey.",
+    "role": ["Teaching Assistant"],
+    "url": "https://codingformetaverse.com/"
+  },
+  {
+    "image": "images/Work/Kit.jpg",
+    "type": ["Student exchange"],
+    "title": "BUxKAIT 2024",
+    "description": "This is a student exchange program between Bangkok University and Kanagawa Institute of Technology.",
+    "maindescription": "BUxKAIT 2024 project has concluded, and it was an incredibly enjoyable month. We traveled together, learned new things, engaged in activities, played sports and games, ate together.",
+    "role": ["Student Assistant", "Buddy"],
+    "url": "https://codingformetaverse.com/"
+  },
+  {
+    "image": "images/Work/S__74948618.jpg",
+    "type": ["Event", "Workshop"],
+    "title": "BU Open House 2024",
+    "description": "BU Open House 2024 workshop on full-stack web development",
+    "maindescription": "What an incredible day! I had the fantastic opportunity to serve as both a host and speaker at the BU Open House 2024 workshop on full-stack web development. As someone who has been immersed in front-end development, Im truly grateful for the chance to share my insights and experiences with the next generation of aspiring developers. A heartfelt thank you to the professors, the organizing team, fellow speakers, TAs, and everyone involved in making this event such a success. Your hard work and dedication truly made a difference! 😊",
+    "role": ["Speaker", "Teacher Assistant"],
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7236725261797314561/"
+  }
+]

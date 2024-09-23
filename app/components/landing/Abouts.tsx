@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -23,126 +25,98 @@ const AboutPage = () => {
     },
   ];
 
+  const images: string[] = [
+    "/images/IMG_0317.jpeg",
+    "/images/1677465294777.jpg",
+    "/images/img1.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [fade, setFade] = useState<boolean>(true); // State to manage the fade effect
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Trigger fade-out
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFade(true); // Trigger fade-in after image change
+      }, 500); // Set this to half of the transition duration to ensure a smooth fade
+    }, 10000); // Change image every 10 seconds
+
+    return () => clearInterval(interval); // Clear interval on component unmount
+  }, []);
+
+  // Optional handler for manually navigating images
+  const goToImage = (index: number) => {
+    setFade(false); // Trigger fade-out
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setFade(true); // Trigger fade-in after image change
+    }, 500);
+  };
+
   return (
-    <main className="font-line-bold text-black h-auto bg-slate-200">
-      <div className="container py-20 flex flex-col gap-3 ">
-        <h1 className="text-4xl">About me</h1>
-        <p className="font-line-Regular">
-          Hey there, everyone! I&apos;m Soravith Puvekit, but you can just call
-          me Pai. I&apos;m a Computer Science student at Bangkok University{" "}
-          <br />
-          and a proud Microsoft Learn Student Ambassador. My passion? Becoming a
-          skilled full-stack developer! Let&apos;s dive into the world of coding
-          together!
-        </p>
-        <div className="flex gap-5 items-start py-5">
-          <div className="w-32 flex flex-shrink-0">
-            <h1 className="text-xl">Role</h1>
+    <main className="font-line-bold text-black h-auto bg-slate-100">
+      <div className="container animate-class pt-[120px]">
+        <div className="flex flex-col justify-center items-center gap-10">
+          <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] text-[#2d2d2d] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-300">
+            About me 👀
           </div>
-          <div>
-            <p className="font-line-Regular">Front-end development</p>
-            <p className="font-line-Regular">UX/UI design</p>
+          <div className="font-line-bold text-[30px] lg:text-[40px]">
+            let&apos;s Get in touch!
           </div>
-        </div>
-
-        <div className="flex gap-5 items-start pb-6">
-          <div className="w-32 flex flex-shrink-0">
-            <h1 className="text-xl">Awards</h1>
-          </div>
-
-          <div>
-            <p className="font-line-Regular">
-              Microsoft Learn Student Ambassador
-            </p>
-          </div>
-        </div>
-
-        {/* <div className="flex flex-col md:flex-row gap-5 items-start pb-5">
-          <div className="w-32 flex flex-shrink-0">
-            <h1 className="text-xl">Experience</h1>
-          </div>
-
-          <ul className="steps steps-vertical">
-            <li className="step flex justify-start">
-              <div className="flex flex-col w-full pl-[20px] pb-5">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-3">
-                  <div className="font-bold">Front-End Engineer</div>
-                  <div className="font-line-Regular">HDmall</div>
-                </div>
-                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start leading-relaxed">
-                  <li>
-                    Developed and designed a B2B website,{" "}
-                    <strong>acquiring 100+ new customers in 3 months.</strong>
-                  </li>
-                  <li>
-                    Created internal tools that{" "}
-                    <strong> boosted marketing productivity by 50%,</strong>{" "}
-                    automating HTML page generation for campaigns.
-                  </li>
-                  <li>
-                    <strong>
-                      Designed and implemented a new Campaign and Highlights
-                      page for HDmall.co.th,
-                    </strong>{" "}
-                    increasing customer engagement by showcasing ongoing
-                    promotions and featured products.
-                  </li>
-                </ul>
+          <div className="bg-gradient-to-br from-[#dff1ff] to-[#FCEBEF] p-8 lg:p-10 lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-20 rounded-3xl w-full animate-class">
+            <div className="flex flex-col justify-center items-start animate-class delay-2">
+              <h1 className="font-line-bold text-3xl">Hi I&apos;m Pai👋</h1>
+              <p className="font-line-Regular text-base pt-3 pb-10 leading-loose">
+                i&apos;m a <strong>Front-end developer / UX/UI Designer</strong>{" "}
+                living in <strong>Bangkok, Thailand.</strong>
+                <br />
+                I&apos;m also a{" "}
+                <strong>Microsoft Learn Student Ambassador.</strong> <br />
+                <strong>My passion?</strong> Becoming a skilled full-stack
+                developer!
+                <br />
+                So please{" "}
+                <strong>don&apos;t hesitate to reach out to me!</strong>
+              </p>
+              <div className="flex gap-3">
+                {Social.map((option, index) => (
+                  <Link href={option.url} key={index}>
+                    <h1 className="text-xl cursor-pointer hover:scale-105 transition-all">
+                      <FontAwesomeIcon
+                        icon={option.label}
+                        style={{ color: "#293144" }}
+                      />
+                    </h1>
+                  </Link>
+                ))}
               </div>
-            </li>
-            <li className="step">
-              <div className="flex flex-col w-full pl-[20px] pb-6">
-                <div className="flex flex-col justify-start items-start gap-[5px] pb-3">
-                  <div className="font-bold">
-                    Full-stack Developer / UX-UI Designer
-                  </div>
-                  <div className="font-line-Regular">
-                    Center of Specialty Innovation (CoSI)
-                  </div>
-                </div>
-                <ul className="list-disc pl-5 font-line-Regular flex flex-col justify-start items-start text-start">
-                  <li>
-                    <strong>Led website development and UI/UX design</strong>{" "}
-                    using modern front-end frameworks{" "}
-                    <strong>
-                      (React, Next.js, etc.), improving user engagement by 25%.
-                    </strong>
-                  </li>
-                  <li>
-                    Managed version control and implemented{" "}
-                    <strong>CI/CD pipelines</strong>
-                    using <strong>GitHub</strong>,
-                    <strong> reducing deployment time by 30%.</strong>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div> */}
-
-        <div className="flex gap-3">
-          {Social.map((option, index) => (
-            <Link href={option.url} key={index}>
-              <h1 className="text-xl cursor-pointer hover:scale-105 transition-all">
-                <FontAwesomeIcon
-                  icon={option.label}
-                  style={{ color: "#293144" }}
+            </div>
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+              <div className="relative">
+                <img
+                  src={images[currentIndex]}
+                  alt={`profile image ${currentIndex + 1}`}
+                  className={`w-[400px] h-[500px] object-cover rounded-3xl image-transition ${
+                    fade ? "show" : ""
+                  }`}
+                  loading="lazy"
                 />
-              </h1>
-            </Link>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-5">
-          <img
-            src="images/img1.jpg"
-            alt=""
-            className="rounded-xl w-full h-[500px] object-cover object-center"
-          />
-          <img
-            src="images/1677465294777.jpg"
-            alt=""
-            className="rounded-xl w-full h-[500px] object-cover object-center"
-          />
+              </div>
+              <div className="flex flex-row lg:flex-col gap-3">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`w-3 h-3 rounded-full mx-1 ${
+                      index === currentIndex ? "bg-black" : "bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -5,6 +5,7 @@ import AboutPage from "./components/landing/Abouts";
 import SkillPage from "./components/landing/Skills";
 import WorksPage from "./components/landing/Works";
 import ContactPage from "./components/landing/Contact";
+import ExperiencePage from "./components/landing/Experience";
 
 export default function Home() {
 
@@ -16,6 +17,9 @@ export default function Home() {
       <div style={{ position: "relative", zIndex: 10 }}>
         <section id="about">
           <AboutPage />
+        </section>
+        <section id="experience">
+          <ExperiencePage />
         </section>
         <section id="skills">
           <SkillPage />

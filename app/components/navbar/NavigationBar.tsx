@@ -13,6 +13,10 @@ const NavigationBar = () => {
       url: "#about",
     },
     {
+      label: "Experience",
+      url: "#experience",
+    },
+    {
       label: "Skills",
       url: "#skills",
     },
@@ -28,22 +32,22 @@ const NavigationBar = () => {
 
 
   return (
-    <nav className="font-line-Regular text-white">
-      <div className="bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-slate-200 z-0 ">
+    <nav className="font-line-Regular text-white animate-class">
+      <div className="bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-slate-100 z-0 ">
         <div className="container h-full flex items-center justify-between">
-          <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
+          <img src="icon/Portpai.png" alt="logo" className="w-auto h-9" />
           <div className="drawer-content lg:hidden">
             {/* Page content here */}
             <label htmlFor="my-drawer-4" className="drawer-button">
               <FontAwesomeIcon
                 icon={faBars}
-                className="text-[#293144] text-2xl cursor-pointer drawer-button"
+                className="text-[#2d2d2d] text-2xl cursor-pointer drawer-button"
               /></label>
           </div>
           <div className="hidden lg:flex gap-3 items-center">
             {nav.map((option, index) => (
               <Link href={option.url} key={index}>
-                <div className="btn text-base text-[#293144] hover:bg-white hover:bg-opacity-30 bg-transparent border-none shadow-none rounded-md">
+                <div className="btn text-base text-[#2d2d2d] hover:bg-white hover:bg-opacity-30 bg-transparent border-none shadow-none rounded-full">
                   {option.label}
                 </div>
               </Link>
@@ -56,14 +60,14 @@ const NavigationBar = () => {
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
         <div className="drawer-side">
           <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-8 w-full min-h-full bg-slate-200 text-[#293144] font-line-bold">
+          <ul className="menu p-8 w-full min-h-full bg-slate-200 text-[#2d2d2d] font-line-bold">
             <div className="flex justify-between items-center">
               <img src="icon/logo.png" alt="logo" className="w-auto h-9" />
               <div>
                 <label htmlFor="my-drawer-4" className="drawer-button">
                   <FontAwesomeIcon
                     icon={faXmark}
-                    className="text-[#293144] text-2xl cursor-pointer drawer-button"
+                    className="text-[#2d2d2d] text-2xl cursor-pointer drawer-button"
                   />
                 </label>
               </div>
