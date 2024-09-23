@@ -10,7 +10,7 @@ import ExperiencePage from "./components/landing/Experience";
 export default function Home() {
 
   return (
-    <main className="font-line-bold text-black">
+    <main className="font-line-bold text-black ">
       <div style={{ position: "relative", zIndex: 0 }}>
         <HeroPage />
       </div>

@@ -23,7 +23,7 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <main className="font-line-bold text-black bg-slate-100 relative">
+    <main className="font-line-bold text-black bg-[#DFF0FE] lg:bg-slate-100 relative">
       {/* <div className="pt-24 px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 flex-col h-auto md:px-16 custom-bg-image container rounded-3xl animate-class">
           <div className="lg:flex justify-center items-center hidden py-20 animate-class">
@@ -50,12 +50,12 @@ const HeroPage = () => {
         </div>
       </div> */}
 
-      <div className="h-auto w-full flex justify-center items-start container p-10 pt-[100px]">
-        <div className="bg-gradient-to-b from-[#dff1ff] to-[#FCEBEF] rounded-[50px] h-auto w-full p-3 flex flex-col justify-center items-center gap-8 lg:gap-3 py-60 animate-class delay-1">
+      <div className="h-auto w-full flex justify-center items-start lg:container pt-[80px] lg:pt-[100px]">
+        <div className="bg-gradient-to-b from-[#dff1ff] to-[#FCEBEF] lg:rounded-[50px] h-auto w-full p-5 lg:p-0 flex flex-col justify-center items-center gap-8 lg:gap-3 py-20 lg:py-60 animate-class delay-1">
           <div className="bg-[#ffffff] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-2">
             Hi I&apos;m Pai👋
           </div>
-          <h1 className="text-center font-line-bold text-2xl lg:text-6xl leading-loose animate-class delay-3">
+          <h1 className="text-center font-line-bold text-2xl lg:text-6xl leading-normal lg:leading-loose animate-class delay-3">
             I design and build website <br /> that look good
           </h1>
           <div className="flex flex-row gap-5 lg:pt-8 animate-class delay-4">

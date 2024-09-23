@@ -33,7 +33,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="font-line-Regular text-white animate-class">
-      <div className="bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-slate-100 z-0 ">
+      <div className="lg:bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-[#DFF0FE] lg:bg-slate-100 z-0 ">
         <div className="container h-full flex items-center justify-between">
           <img src="icon/Portpai.png" alt="logo" className="w-auto h-9" />
           <div className="drawer-content lg:hidden">
