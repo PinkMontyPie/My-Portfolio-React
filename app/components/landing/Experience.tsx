@@ -36,14 +36,14 @@ const ExperiencePage = () => {
             <div className="flex flex-col lg:flex-row justify-start items-center bg-white rounded-3xl p-8 gap-8 animate-class delay-3">
               <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] rounded-xl p-5">
                 <img
-                  src="images/trans-jib-hdmall-square.svg"
+                  src="images/hdmall_square_trans1.png"
                   alt=""
                   width={100}
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="font-line-bold text-xl">HDmall</h1>
-                <h2 className="font-line-Regular">Front-end Developer</h2>
+                <h2 className="font-line-Regular">Product Engineer</h2>
                 <ul className="list-disc pl-5 leading-relaxed">
                   <li>
                     Developed and designed a B2B website for HDmall, resulting
