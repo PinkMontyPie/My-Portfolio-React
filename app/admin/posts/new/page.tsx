@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 
 // Dynamically import the editor to avoid SSR issues
-const Editor = dynamic(() => import("@/components/Editor"), { ssr: false });
+const Editor = dynamic(() => import("../../../components/Editor"), { ssr: false });
 
 export default function NewPostPage() {
   const router = useRouter();

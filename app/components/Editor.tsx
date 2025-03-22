@@ -24,37 +24,45 @@ export default function Editor({ value, onChange }: EditorProps) {
     }
   }, [value, editor]);
 
+  if (!editor) {
+    return null;
+  }
+
   return (
     <div className="border rounded-md">
       <div className="border-b p-2 flex space-x-2">
         <button
-          onClick={() => editor?.chain().focus().toggleBold().run()}
+          type="button"
+          onClick={() => editor.chain().focus().toggleBold().run()}
           className={`p-2 rounded ${
-            editor?.isActive("bold") ? "bg-gray-200" : "hover:bg-gray-100"
+            editor.isActive("bold") ? "bg-gray-200" : "hover:bg-gray-100"
           }`}
         >
           Bold
         </button>
         <button
-          onClick={() => editor?.chain().focus().toggleItalic().run()}
+          type="button"
+          onClick={() => editor.chain().focus().toggleItalic().run()}
           className={`p-2 rounded ${
-            editor?.isActive("italic") ? "bg-gray-200" : "hover:bg-gray-100"
+            editor.isActive("italic") ? "bg-gray-200" : "hover:bg-gray-100"
           }`}
         >
           Italic
         </button>
         <button
-          onClick={() => editor?.chain().focus().toggleBulletList().run()}
+          type="button"
+          onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={`p-2 rounded ${
-            editor?.isActive("bulletList") ? "bg-gray-200" : "hover:bg-gray-100"
+            editor.isActive("bulletList") ? "bg-gray-200" : "hover:bg-gray-100"
           }`}
         >
           Bullet List
         </button>
         <button
-          onClick={() => editor?.chain().focus().toggleOrderedList().run()}
+          type="button"
+          onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={`p-2 rounded ${
-            editor?.isActive("orderedList") ? "bg-gray-200" : "hover:bg-gray-100"
+            editor.isActive("orderedList") ? "bg-gray-200" : "hover:bg-gray-100"
           }`}
         >
           Numbered List

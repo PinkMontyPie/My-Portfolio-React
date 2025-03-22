@@ -261,7 +261,7 @@
 
 "@tiptap/core@^2.11.5":
   version "2.11.5"
-  resolved "https://registry.npmjs.org/@tiptap/core/-/core-2.11.5.tgz"
+  resolved "https://registry.yarnpkg.com/@tiptap/core/-/core-2.11.5.tgz#2bf1b08c4ca2467778d0a109634c45ab475522f4"
   integrity sha512-jb0KTdUJaJY53JaN7ooY3XAxHQNoMYti/H6ANo707PsLXVeEqJ9o8+eBup1JU5CuwzrgnDc2dECt2WIGX9f8Jw==
 
 "@tiptap/extension-blockquote@^2.11.5":
@@ -375,7 +375,7 @@
 
 "@tiptap/pm@^2.11.5":
   version "2.11.5"
-  resolved "https://registry.npmjs.org/@tiptap/pm/-/pm-2.11.5.tgz"
+  resolved "https://registry.yarnpkg.com/@tiptap/pm/-/pm-2.11.5.tgz#6577e277e5a991c605a3dfcebde7c0b794d8def4"
   integrity sha512-z9JFtqc5ZOsdQLd9vRnXfTCQ8v5ADAfRt9Nm7SqP6FUHII8E1hs38ACzf5xursmth/VonJYb5+73Pqxk1hGIPw==
   dependencies:
     prosemirror-changeset "^2.2.1"
