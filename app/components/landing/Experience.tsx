@@ -35,11 +35,7 @@ const ExperiencePage = () => {
           <div className="flex flex-col gap-10">
             <div className="flex flex-col lg:flex-row justify-start items-center bg-white rounded-3xl p-8 gap-8 animate-class delay-3">
               <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] rounded-xl p-5">
-                <img
-                  src="images/hdmall_square_trans1.png"
-                  alt=""
-                  width={100}
-                />
+                <img src="images/hdmall_square_trans1.png" alt="" width={100} />
               </div>
               <div className="flex flex-col gap-2">
                 <h1 className="font-line-bold text-xl">HDmall</h1>
@@ -52,6 +48,25 @@ const ExperiencePage = () => {
                   <li>
                     Created an internal tool to streamline company operations,
                     boosting marketing team productivity by 50%.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row justify-start items-center bg-white rounded-3xl p-8 gap-8 animate-class delay-3">
+              <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] rounded-xl p-5">
+                <img src="icon/CoDev_CB.png" alt="" width={200} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="font-line-bold text-xl">Codev Community</h1>
+                <h2 className="font-line-Regular">Founder</h2>
+                <ul className="list-disc pl-5 leading-relaxed">
+                  <li>
+                    The Codev Community was founded to create a space where
+                    Students developers can collaborate, share ideas, and support each
+                    other in their coding journeys. It is a place for both
+                    beginners and experienced developers to come together and
+                    work on projects, learn new technologies, and grow their
+                    skills.
                   </li>
                 </ul>
               </div>
