@@ -36,7 +36,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="font-line-Regular text-white animate-class">
-      <div className="lg:bg-opacity-60 backdrop-blur-lg h-[80px] lg:h-[90px] bg-[#DFF0FE] lg:bg-slate-100 z-0 ">
+      <div className="lg:bg-opacity-60 backdrop-blur-lg h-[70px] lg:h-[90px] bg-[#DFF0FE] lg:bg-slate-100 z-0 ">
         <div className="container h-full flex items-center justify-between">
           <Link href="/">
             <div className="relative w-auto h-9">
@@ -45,7 +45,7 @@ const NavigationBar = () => {
                 alt="logo"
                 width={500}
                 height={500}
-                className="w-auto h-9"
+                className="w-auto h-8 lg:h-9"
                 priority
               />
             </div>

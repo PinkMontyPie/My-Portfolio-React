@@ -50,8 +50,8 @@ const HeroPage = () => {
         </div>
       </div> */}
 
-      <div className="h-auto w-full flex justify-center items-start lg:container pt-[80px] lg:pt-[100px]">
-        <div className="bg-gradient-to-b from-[#dff1ff] to-[#FCEBEF] lg:rounded-[50px] h-auto w-full p-5 lg:p-0 flex flex-col justify-center items-center gap-8 lg:gap-3 py-20 lg:py-60 animate-class delay-1">
+      <div className="h-auto w-full flex justify-center items-start lg:container pt-[70px] lg:pt-[100px]">
+        <div className="bg-gradient-to-b from-[#dff1ff] to-[#FCEBEF] lg:rounded-[50px] h-auto w-full p-5 lg:p-0 flex flex-col justify-center items-center gap-8 lg:gap-3 py-40 lg:py-60 animate-class delay-1">
           <div className="bg-[#ffffff] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-2">
             Hi I&apos;m Pai👋
           </div>
