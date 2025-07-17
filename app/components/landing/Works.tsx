@@ -61,19 +61,19 @@ const WorksPage: React.FC = () => {
                 onClick={(type) => setActiveFilter(type)}
                 active={!activeFilter}
               />
-              {Array.from(new Set(typedWorkslist.flatMap((work) => work.type))).map(
-                (type) => (
-                  <FilterButton
-                    key={type}
-                    type={type}
-                    onClick={setActiveFilter}
-                    active={activeFilter === type}
-                  />
-                )
-              )}
+              {Array.from(
+                new Set(typedWorkslist.flatMap((work) => work.type))
+              ).map((type) => (
+                <FilterButton
+                  key={type}
+                  type={type}
+                  onClick={setActiveFilter}
+                  active={activeFilter === type}
+                />
+              ))}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
-              {filteredWorks.map((work) => (
+              {filteredWorks.slice(0, 6).map((work) => (
                 <Link
                   key={work.slug}
                   href={`/blog/${work.slug}`}
@@ -113,6 +113,7 @@ const WorksPage: React.FC = () => {
                 </Link>
               ))}
             </div>
+
             <div className="flex justify-center mt-12">
               <Link
                 href="/blog"

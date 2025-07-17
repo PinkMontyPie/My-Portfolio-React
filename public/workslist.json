@@ -20,6 +20,26 @@
     "slug": "microsoft-learn-student-ambassador"
   },
   {
+    "image": "images/buride-application.png",
+    "type": ["UX/UI Design"],
+    "title": "Buride Application",
+    "description": "Concept UX-UI designs : Buride Application",
+    "maindescription": "Buride is application for renting scooters and bicycle to go around in the campus for students of Bangkok University. ",
+    "role": ["Project owner", "UX/UI Designer"],
+    "url": "https://www.figma.com/file/Vf5umQiq41R7YFUQPoD5i1/Buride?node-id=0%3A1&t=6R6CA4ZAUyJQDpET-1",
+    "slug": "buride-application"
+  },
+   {
+    "image": "images/Takeaway-img.png",
+    "type": ["UX/UI Design"],
+    "title": "Takeaway Application",
+    "description": "Concept UX-UI designs : Takeaway Application",
+    "maindescription": "Takeaway is application for ordering food and drinks",
+    "role": ["Project owner", "UX/UI Designer"],
+    "url": "https://www.figma.com/design/wWhzAJILJc2uDeE6y6f71E/Takeaway?node-id=0-1&t=3RRY2iYi4EiiUjio-1",
+    "slug": "takeaway-application"
+  },
+  {
     "image": "images/Work/pypathway.jpg",
     "type": ["Event", "Workshop"],
     "title": "Python Developer Pathway Be Inspired session workshop by MLSA",
@@ -58,15 +78,5 @@
     "role": ["Speaker", "Teacher Assistant"],
     "url": "https://www.linkedin.com/feed/update/urn:li:activity:7236725261797314561/",
     "slug": "bu-open-house-2024"
-  },
-  {
-    "image": "https://media.licdn.com/dms/image/v2/C5622AQF9rjwoAFZL7Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1674488033435?e=1755734400&v=beta&t=YqDapLw6RhQOdcr1yVv-8PHvHnwRHnsUxeM1V-PYnmE",
-    "type": ["UX/UI Design"],
-    "title": "Buride Application",
-    "description": "Concept UX-UI designs : Buride Application",
-    "maindescription": "Buride is application for renting scooters and bicycle to go around in the campus for students of Bangkok University. ",
-    "role": ["Project owner", "UX/UI Designer"],
-    "url": "https://lnkd.in/gmP7Are8",
-    "slug": "buride-application"
   }
-] 
+]
