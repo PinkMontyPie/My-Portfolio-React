@@ -29,16 +29,125 @@
 }
 
 @layer base {
+  /* The page is an island: sea all around, sand underneath everything */
+  html {
+    overflow-x: clip;
+  }
   body {
-    font-family: "LINESeed_Thin", "LINESeed_Regular", "LINESeed_Bold",
-      "LINESeed_ExtraBold", "LINESeed_Hevy", sans-serif;
-    background-color: #ffffff;
+    /* flow-root keeps the island's top margin inside body instead of collapsing through it */
+    display: flow-root;
+    color: var(--ink);
+    /* Transparent so the fixed .sea layer behind it shows; the root carries the sea colour */
+    background-color: transparent;
+  }
+}
+
+@layer components {
+  .section {
+    @apply pt-16 sm:pt-24 lg:pt-32;
+  }
+
+  /* Section eyebrow: a small peach chip, like the streak badge in Aomly */
+  .section-pill {
+    @apply font-line-bold text-[13px] lg:text-sm px-3.5 py-1 rounded-xl -mb-6 lg:-mb-7;
+    color: var(--ink-soft);
+    background: var(--peach);
+    border: 2px solid var(--edge);
+    box-shadow: 0 3px 0 var(--ledge);
+  }
+
+  .section-title {
+    @apply font-line-bold text-[30px] lg:text-[44px] text-center leading-[1.1] tracking-[-0.01em];
+    color: var(--ink);
+    text-shadow: 0 2px 18px rgba(255, 255, 255, 0.55);
+  }
+
+  .section-subtitle {
+    @apply font-line-Regular text-[15px] sm:text-base text-center max-w-[560px] -mt-4;
+    color: var(--ink-muted);
+  }
+
+  /* Peach card with a tan rim and a solid ledge underneath, so it reads like a chunky tile */
+  .card-soft,
+  .cozy-card {
+    @apply rounded-[26px];
+    background: var(--peach);
+    border: 2px solid var(--edge);
+    box-shadow: 0 5px 0 var(--ledge), 0 18px 34px -18px rgba(120, 70, 30, 0.45);
+    transition: transform 350ms var(--ease-out-soft), box-shadow 350ms var(--ease-out-soft),
+      border-color 200ms ease, scale 150ms var(--ease-out-soft);
+  }
+
+  .card-soft-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 var(--ledge), 0 24px 40px -18px rgba(120, 70, 30, 0.5);
+  }
+
+  /* Lighter well inside a card ("Left after fixed") */
+  .cozy-inset {
+    @apply rounded-[18px];
+    background: var(--cream);
+    border: 2px solid var(--edge-soft);
+  }
+
+  /* Small square tile for logos and icons */
+  .cozy-tile {
+    @apply rounded-2xl;
+    background: var(--cream);
+    border: 2px solid var(--edge);
+    box-shadow: 0 3px 0 var(--ledge);
+  }
+
+  /* Pill buttons that sit on a ledge and press down into it */
+  .cozy-btn,
+  .cozy-btn-primary {
+    @apply font-line-bold rounded-full;
+    border: 2px solid var(--edge);
+    background: var(--peach);
+    color: var(--ink);
+    box-shadow: 0 4px 0 var(--ledge);
+    transition: transform 120ms var(--ease-out-soft), box-shadow 120ms var(--ease-out-soft),
+      background-color 200ms ease, color 200ms ease, filter 200ms ease;
+  }
+  .cozy-btn:hover {
+    background: var(--cream);
+  }
+  .cozy-btn-primary {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent-deep);
+    box-shadow: 0 4px 0 var(--accent-deep);
+  }
+  .cozy-btn-primary:hover {
+    filter: brightness(1.05);
+  }
+  .cozy-btn:active,
+  .cozy-btn-primary:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--ledge);
+  }
+  .cozy-btn-primary:active {
+    box-shadow: 0 1px 0 var(--accent-deep);
+  }
+
+  /* Recessed track for segmented controls (Fixed / Debt) */
+  .cozy-track {
+    @apply rounded-full;
+    background: var(--track);
+    box-shadow: inset 0 2px 0 rgba(160, 100, 60, 0.12);
+  }
+
+  .cozy-chip {
+    @apply font-line-bold rounded-full text-xs px-2.5 py-1;
+    color: var(--ink-soft);
+    background: var(--cream);
+    border: 1.5px solid var(--edge-soft);
   }
 }
 
 @layer utilities {
   .container {
-    @apply px-8 sm:px-12 max-w-[1300px] lg:m-auto;
+    @apply px-5 sm:px-12 max-w-[1096px] lg:m-auto; /* 1000px of content between the gutters */
   }
 
   html {
@@ -52,30 +161,131 @@
   }
 }
 
+/* ---------- Beach theme (Aomly) ---------- */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --ink: #123c4c;
+  --ink-soft: #6e5a4c;
+  --ink-muted: #56636b;
+  --sea: #54b9d8;
+  --sand: #f8e5d4;
+  --wet-sand: #f1d4ba;
+  --peach: #fff1e7;
+  --cream: #fffaf5;
+  --track: #f3d3bf;
+  --edge: #e3b28f;
+  --edge-soft: #f0cdb5;
+  --ledge: #d39c74;
+  --accent: #4db5d8;
+  --accent-deep: #2e8eb2;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Every face is Fredoka now, so the old LINE Seed family names map to weights */
+.font-line-Thin {
+  font-weight: 300;
+}
+.font-line-Regular {
+  font-weight: 400;
+}
+.font-line-bold,
+strong,
+b {
+  font-weight: 600;
+}
+.font-line-ExtraBold,
+.font-line-Hevy {
+  font-weight: 700;
+}
+
+/* Outside any layer so it beats daisyUI's own root background (dark when the OS is in dark mode) */
+:root {
+  background-color: var(--sea);
+}
+
+/* Small white ripples drifting on the sea */
+:root {
+  --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='120' fill='none' stroke='%23fff' stroke-opacity='.35' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M14 30q8-7 16 0t16 0'/%3E%3Cpath d='M96 84q8-7 16 0t16 0'/%3E%3C/svg%3E");
+}
+
+/* Ripples on a fixed layer one tile taller than the screen. SeaParallax slides it up by part of the
+   scroll distance (wrapped to one tile), so the sea drifts slower than the page: a transform only, no repaint. */
+.sea {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: calc(100vh + 120px);
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--waves);
+  will-change: transform;
+}
+
+/* How much sea shows around the island: little above it so the page starts near the top, more at the sides
+   and bottom. The navbar is placed from these too. */
+:root {
+  --shore: 12px;
+  --shore-top: 12px;
+}
+@media (min-width: 768px) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --shore: 72px;
+    --shore-top: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --shore: 112px;
+  }
+}
+
+/* The sand island the whole page sits on. The sand lives on its own layer behind the content so the
+   #shoreline filter can roughen its edge (and the wet sand and surf with it) without touching the text. */
+.island {
+  position: relative;
+  isolation: isolate;
+  margin: var(--shore-top) var(--shore) var(--shore);
+  margin-bottom: 40px;
+}
+.island::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 28px;
+  background: var(--sand);
+  /* Phones get a thinner surf and a gentler wobble, so the coast doesn't eat into the content */
+  box-shadow: inset 0 0 0 6px var(--wet-sand), 0 0 0 4px rgba(255, 255, 255, 0.75),
+    0 0 0 9px rgba(255, 255, 255, 0.25);
+  filter: url(#shoreline-sm);
+}
+@media (min-width: 768px) {
+  .island::before {
+    border-radius: 72px;
+    box-shadow: inset 0 0 0 10px var(--wet-sand), 0 0 0 6px rgba(255, 255, 255, 0.75),
+      0 0 0 16px rgba(255, 255, 255, 0.25);
+    filter: url(#shoreline);
   }
 }
 
 
+/* Scroll reveal: things rise up out of the sand. The element starts --rise lower with that much of its
+   bottom clipped, so its lower edge stays on a fixed "ground line" and it seems to push up through the
+   surface. A small settle at the end, like popping out of sand. The clip reaches past the edges by 60px
+   so ledges and shadows aren't cut once it has landed. It never hides more than 80% of the height: a short
+   element (a pill, a one-line title) clipped away completely never registers with the IntersectionObserver,
+   so it would never get .show and stay invisible. */
 .animate-class {
+  --rise: 56px;
   opacity: 0;
-  transition: all 0.8s ease;
-  transform: translateY(50px);
+  transform: translateY(var(--rise));
+  clip-path: inset(-60px -60px min(var(--rise), 80%) -60px);
+  transition: opacity 0.8s ease, transform 1.4s var(--ease-emerge), clip-path 1.4s var(--ease-emerge);
 }
 
 .show {
   opacity: 1;
   transform: translateY(0);
+}
+.animate-class.show {
+  clip-path: inset(-60px -60px -60px -60px);
 }
 
 .delay-1 {
@@ -166,4 +376,220 @@
 
 .image-transition.show {
   opacity: 1;
+}
+
+/* ---------- Apple-style foundations ---------- */
+
+:root {
+  /* Critically damped feel: fast start, long gentle settle, no overshoot */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Rising out of the sand: quick push up, a slight overshoot, then settle */
+  --ease-emerge: cubic-bezier(0.34, 1.25, 0.64, 1);
+  /* iOS sheet / indicator curve */
+  --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+html {
+  /* No 300ms tap delay, no grey tap flash: feedback comes from .press instead */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Large type wants negative tracking and tight leading; body stays near 0 */
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+/* Press feedback: lands on pointer-down, instantly, and releases from wherever it is */
+.press {
+  transition: scale 120ms var(--ease-out-soft), background-color 200ms ease,
+    color 200ms ease, box-shadow 300ms ease, border-color 200ms ease;
+}
+.press:active {
+  scale: 0.97;
+}
+/* Big surfaces barely give under a press */
+.card-soft:active {
+  scale: 0.985;
+}
+
+/* Translucent material: a floating layer content scrolls under; the bright top edge is light catching it */
+.material {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 0 0 1px rgba(15, 23, 42, 0.06), 0 8px 28px -6px rgba(15, 23, 42, 0.12);
+}
+.material-raised {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 0 0 1px rgba(15, 23, 42, 0.07), 0 18px 44px -10px rgba(15, 23, 42, 0.22);
+}
+
+/* Menu that materializes from its trigger and returns the same way (interruptible: plain transitions) */
+.popover {
+  transform-origin: top right;
+  transition: opacity 260ms var(--ease-sheet), scale 360ms var(--ease-sheet),
+    filter 260ms var(--ease-sheet), visibility 0s linear 360ms;
+}
+.popover[data-open="false"] {
+  opacity: 0;
+  scale: 0.94;
+  filter: blur(6px);
+  visibility: hidden;
+  pointer-events: none;
+}
+.popover[data-open="true"] {
+  opacity: 1;
+  scale: 1;
+  filter: blur(0);
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-class,
+  .animate-class.show {
+    transform: none;
+    clip-path: none;
+    transition: opacity 0.3s ease;
+  }
+  .press:active {
+    scale: 1;
+  }
+  .card-soft:active {
+    scale: 1;
+  }
+  .popover,
+  .popover[data-open="false"] {
+    scale: 1;
+    filter: none;
+    transition: opacity 150ms ease, visibility 0s linear 150ms;
+  }
+  .popover[data-open="true"] {
+    transition: opacity 150ms ease;
+  }
+  .nav-indicator {
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .material,
+  .material-raised {
+    background: #ffffff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .material,
+  .material-raised {
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #293144;
+  }
+}
+
+/* Navbar: a flat full-width bar at the top that draws in to a floating glass pill once you scroll */
+/* Same 1000px as the section content, so the logo and the call to action line up with the card edges.
+   At the top it sits inside the island's shore; once you scroll it rises to the top of the screen. */
+.nav-shell {
+  max-width: 1000px;
+}
+.nav-wrap {
+  /* Side padding matches the .container gutters, so the bar lines up with the cards at every width */
+  padding: calc(var(--shore-top) + 20px) calc(var(--shore) + 20px) 0;
+  transition: padding-top 420ms var(--ease-sheet);
+}
+@media (min-width: 640px) {
+  .nav-wrap {
+    padding-left: calc(var(--shore) + 48px);
+    padding-right: calc(var(--shore) + 48px);
+  }
+}
+.nav-wrap[data-scrolled="true"] {
+  padding-top: 15px;
+}
+/* Phones and tablets: once scrolled, the logo and menu button sit in one peach pill so headings don't show through */
+@media (max-width: 1023px) {
+  .nav-wrap {
+    transition: padding 420ms var(--ease-sheet);
+  }
+  .nav-wrap[data-scrolled="true"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .nav-wrap .nav-bar {
+    transition: background-color 300ms ease, box-shadow 300ms ease, border-color 300ms ease,
+      padding 420ms var(--ease-sheet);
+    border: 2px solid transparent;
+  }
+  .nav-wrap[data-scrolled="true"] .nav-bar {
+    padding: 0 6px;
+    padding-right: 10px;
+    background-color: var(--peach);
+    border-color: var(--edge);
+    box-shadow: 0 4px 0 var(--ledge), 0 14px 28px -14px rgba(120, 70, 30, 0.45);
+  }
+  .nav-wrap[data-scrolled="true"] .nav-bar .cozy-tile {
+    border-color: transparent;
+    box-shadow: none;
+    background: transparent;
+  }
+}
+.nav-bar {
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0), 0 0 0 1px rgba(15, 23, 42, 0),
+    0 8px 28px -6px rgba(15, 23, 42, 0);
+  -webkit-backdrop-filter: blur(0) saturate(100%);
+  backdrop-filter: blur(0) saturate(100%);
+  transition: background-color 360ms var(--ease-out-soft), box-shadow 360ms var(--ease-out-soft),
+    backdrop-filter 360ms var(--ease-out-soft), -webkit-backdrop-filter 360ms var(--ease-out-soft),
+    padding 560ms var(--ease-sheet);
+}
+/* Beach theme: the bar itself stays clear; its pieces are the chunky tiles */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-shell,
+  .nav-bar {
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+  }
+}
+
+
+/* Horizontal chip rows on phones: swipeable, no scrollbar */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Photo carousel: the active dot fills over the time each photo is shown */
+.carousel-progress {
+  transform: scaleX(0);
+  animation-name: carousel-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes carousel-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-progress {
+    animation: none;
+    transform: none;
+  }
 }

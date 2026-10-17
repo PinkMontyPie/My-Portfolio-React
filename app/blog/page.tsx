@@ -1,38 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import BackButton from "../components/BackButton";
 import workslist from "../../public/workslist.json";
-
-interface Work {
-  image: string;
-  type: string[];
-  title: string;
-  description: string;
-  maindescription: string;
-  role: string[];
-  url: string;
-  slug: string;
-}
-
-const FilterButton: React.FC<{
-  type: string;
-  onClick: (type: string | null) => void;
-  active: boolean;
-}> = ({ type, onClick, active }) => {
-  return (
-    <button
-      className={`px-4 py-2 rounded-md text-xs lg:text-base focus:scale-95 transition-all ${
-        active
-          ? "bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] text-[#2d2d2d]"
-          : "bg-white text-gray-700"
-      }`}
-      onClick={() => onClick(type === "All" ? null : type)}
-    >
-      {type}
-    </button>
-  );
-};
+import { FilterButton, Work, WorkCard } from "../components/works/WorkCard";
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
@@ -62,19 +32,18 @@ export default function BlogPage() {
 
   return (
     <>
-      <main className="font-line-bold text-black h-auto bg-slate-100">
-        <div className="container mx-auto animate-class p-10 pt-[150px]">
+      <main className="font-line-bold text-[var(--ink)] min-h-screen">
+        <div className="container animate-class pt-[110px] lg:pt-[140px] pb-24">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-10">
-              <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] text-[#2d2d2d] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-300 inline-block mb-4">
-                My Works 💡
-              </div>
-              <h1 className="text-[30px] lg:text-[40px] font-bold mb-4">
-                All My Projects and Experiences
-              </h1>
+            <div className="mb-6 sm:mb-4">
+              <BackButton href="/#works" label="Home" />
+            </div>
+            <div className="flex flex-col items-center gap-10 mb-10">
+              <div className="section-pill">Works</div>
+              <h1 className="section-title">All my projects and experiences</h1>
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center mb-12">
+            <div className="no-scrollbar flex flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 lg:gap-3 overflow-x-auto sm:overflow-visible w-[calc(100%+2.5rem)] sm:w-auto -mx-5 sm:mx-0 px-5 sm:px-0 pb-1 mb-8 sm:mb-12">
               <FilterButton
                 type="All"
                 onClick={(type) => setActiveFilter(type)}
@@ -92,45 +61,9 @@ export default function BlogPage() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {filteredWorks.map((work) => (
-                <Link
-                key={work.slug}
-                href={`/blog/${work.slug}`}
-                className="card w-auto h-full bg-white cursor-pointer hover:scale-105 transition-all"
-              >
-                <figure>
-                  <div className="relative h-[200px] w-full">
-                    <Image
-                      src={`/${work.image}`}
-                      alt={work.title}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                </figure>
-                <div className="card-body">
-                  <div className="flex card-actions">
-                    {work.type.map((type, index) => (
-                      <div
-                        key={index}
-                        className="badge rounded-md bg-gray-200 border-none text-[#293144]"
-                      >
-                        {type}
-                      </div>
-                    ))}
-                  </div>
-                  <h2 className="card-title">{work.title}</h2>
-                  <p className="text-gray-600 py-3">{work.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {work.role.map((role, index) => (
-                      <span key={index} className="text-sm text-gray-500">
-                        {role}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
+                <WorkCard key={work.slug} work={work} />
               ))}
             </div>
           </div>

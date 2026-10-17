@@ -1,0 +1,12 @@
+{
+  // Static site: Next.js exports to out/, and Workers serves those files directly (no server code)
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portpai",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // /blog serves out/blog.html, and unknown paths get the site's own 404 page
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

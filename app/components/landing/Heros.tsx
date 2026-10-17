@@ -23,7 +23,7 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <main className="font-line-bold text-black bg-[#DFF0FE] lg:bg-slate-100 relative">
+    <main className="font-line-bold text-[var(--ink)] relative">
       {/* <div className="pt-24 px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 flex-col h-auto md:px-16 custom-bg-image container rounded-3xl animate-class">
           <div className="lg:flex justify-center items-center hidden py-20 animate-class">
@@ -50,26 +50,34 @@ const HeroPage = () => {
         </div>
       </div> */}
 
-      <div className="h-auto w-full flex justify-center items-start lg:container pt-[70px] lg:pt-[100px]">
-        <div className="bg-gradient-to-b from-[#dff1ff] to-[#FCEBEF] lg:rounded-[50px] h-auto w-full p-5 lg:p-0 flex flex-col justify-center items-center gap-8 lg:gap-3 py-40 lg:py-60 animate-class delay-1">
-          <div className="bg-[#ffffff] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-2">
-            Hi I&apos;m Pai👋
-          </div>
-          <h1 className="text-center font-line-bold text-[24px] lg:text-[60px] leading-relaxed animate-class delay-3">
-            I design and build website <br /> that look good
+      <div className="h-auto w-full flex justify-center items-start lg:container">
+        <div className="relative h-auto w-full px-5 lg:px-0 flex flex-col justify-center items-center gap-5 sm:gap-6 pt-32 pb-16 sm:pt-36 sm:pb-28 lg:pt-52 lg:pb-0 animate-class delay-1">
+          <h1 className="relative text-center font-line-bold text-[40px] sm:text-[52px] lg:text-[72px] leading-[1.05] tracking-[-0.01em] [text-shadow:0_2px_24px_rgba(255,255,255,.6)] animate-class delay-3">
+            Hi, I&apos;m Pai👋
+            <br />
+            <span className="text-[var(--accent)] [text-shadow:0_3px_0_var(--accent-deep)]">
+              I design &amp; build
+            </span>
+            <br className="sm:hidden" />{" "}
+            websites
+            <br /> that look good.
           </h1>
-          <div className="flex flex-row gap-5 lg:pt-8 animate-class delay-4">
+          <p className="relative text-center font-line-Regular text-[15px] sm:text-base lg:text-lg leading-relaxed text-[var(--ink-muted)] max-w-[560px] px-2 sm:px-0 animate-class delay-3">
+            Front-end developer and UX/UI designer in Bangkok, turning complex
+            ideas into intuitive, fast and friendly interfaces.
+          </p>
+          <div className="relative grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 lg:gap-4 pt-2 w-full sm:w-auto max-w-[360px] sm:max-w-none animate-class delay-4">
             <a
               href="#works"
-              className="px-8 py-3 bg-[#2d2d2d] font-line-Regular text-white rounded-full transition-all hover:scale-95 inline-block align-middle"
+              className="cozy-btn-primary px-5 sm:px-8 py-3 text-center inline-block align-middle"
             >
-              My work
+              See my work
             </a>
             <a
-              href="#about"
-              className="px-8 py-3 border-[#2d2d2d] border-2 font-line-Regular text-[#2d2d2d] rounded-full hover:bg-[#2d2d2d] hover:scale-95 hover:text-white transition-all"
+              href="#contact"
+              className="cozy-btn px-5 sm:px-8 py-3 text-center"
             >
-              About me
+              Get in touch
             </a>
           </div>
         </div>
@@ -88,7 +96,7 @@ const HeroPage = () => {
             </div>
             <a
               href=""
-              className="px-8 py-4 bg-[#2d2d2d] font-line-Regular text-white rounded-full transition-all hover:scale-95 animate-class"
+              className="press px-8 py-4 bg-[#2d2d2d] font-line-Regular text-white rounded-full"
             >
               Visit Website
             </a>
@@ -114,7 +122,7 @@ const HeroPage = () => {
             </div>
             <a
               href=""
-              className="px-8 py-4 bg-[#2d2d2d] font-line-Regular text-white rounded-full transition-all hover:scale-95 animate-class"
+              className="press px-8 py-4 bg-[#2d2d2d] font-line-Regular text-white rounded-full"
             >
               Visit Website
             </a>

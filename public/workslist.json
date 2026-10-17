@@ -1,81 +1,247 @@
 [
   {
+    "image": "images/Work/aomly.png",
+    "imageFit": "contain",
+    "type": [
+      "Web Development",
+      "UX/UI Design",
+      "Side Project"
+    ],
+    "title": "Aomly",
+    "description": "A daily budget tracker that gives you one number each morning, with your bills, savings and debt already taken out.",
+    "maindescription": "I’ve struggled with money for a while, and none of the budgeting apps I tried really fit me. So I built my own: Aomly.\n\nAomly gives you one number each morning. Your bills, savings and debt are already taken out of it, so you know exactly what you can spend today.\n\nKey Features:\n• Today: a single daily spending number that rolls what you save into tomorrow\n• Reminders & streak: a nudge at mealtimes and a streak to keep\n• Bills: see when each fixed bill and installment stops\n• Cards & pay later: track Thai credit cards and pay-later plans\n• Debt plan: a payoff plan with your debt-free date\n• Overview: your whole month on one page\n• Sync: share your data between your PC and iPhone (invite-only for now)\n\nWhat I did:\n• Designed the product, the UX/UI and the landing page end to end\n• Built it with Next.js, React, TypeScript and Tailwind CSS, deployed on Cloudflare Workers\n• Made it bilingual (Thai and English), with light and dark themes\n• Kept data saved on the device by default, with no account needed to start\n\nIt’s free and works right in your browser or on your phone. I made it for myself, but I hope it helps other people with the same struggles too.",
+    "gallery": [
+      {
+        "src": "images/Work/aomly-app-phone-daily.png",
+        "caption": "Daily",
+        "w": 1170,
+        "h": 1992,
+        "tall": true
+      },
+      {
+        "src": "images/Work/aomly-app-phone-add.png",
+        "caption": "Add spending",
+        "w": 1170,
+        "h": 1992,
+        "tall": true
+      },
+      {
+        "src": "images/Work/aomly-app-phone-debt.png",
+        "caption": "Debt plan",
+        "w": 1170,
+        "h": 1992,
+        "tall": true
+      },
+      {
+        "src": "images/Work/aomly-app-daily.png",
+        "caption": "What you can still spend today, the month budget and a calendar of every day",
+        "w": 1331,
+        "h": 940,
+        "group": "Daily"
+      },
+      {
+        "src": "images/Work/aomly-app-add.png",
+        "caption": "Log spending in a few taps: amount, category and how you paid",
+        "w": 1331,
+        "h": 940,
+        "group": "Daily"
+      },
+      {
+        "src": "images/Work/aomly-app-bills.png",
+        "caption": "Fixed bills, the card each one goes on, and which ones are ending",
+        "w": 1331,
+        "h": 940,
+        "group": "Bills"
+      },
+      {
+        "src": "images/Work/aomly-app-timeline.png",
+        "caption": "Payment timeline: see your monthly bills go down as each one ends",
+        "w": 1331,
+        "h": 940,
+        "group": "Bills"
+      },
+      {
+        "src": "images/Work/aomly-app-debt.png",
+        "caption": "Your debt-free date, how fast to pay, and the plan month by month",
+        "w": 1331,
+        "h": 940,
+        "group": "Debt"
+      },
+      {
+        "src": "images/Work/aomly-app-overview.png",
+        "caption": "How your pay splits, how you paid, and what next month looks like",
+        "w": 1331,
+        "h": 940,
+        "group": "Overview"
+      },
+      {
+        "src": "images/Work/aomly-app-settings.png",
+        "caption": "Your profile and settings at a glance",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      },
+      {
+        "src": "images/Work/aomly-app-pay.png",
+        "caption": "Pay, savings goal, debt and interest rate",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      },
+      {
+        "src": "images/Work/aomly-app-budget.png",
+        "caption": "Daily budget, with suggested amounts for a faster payoff",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      },
+      {
+        "src": "images/Work/aomly-app-cards.png",
+        "caption": "Credit cards and pay-later plans, with each statement cut-off",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      },
+      {
+        "src": "images/Work/aomly-app-payday.png",
+        "caption": "Paydays, marked on the calendar",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      },
+      {
+        "src": "images/Work/aomly-app-reminders.png",
+        "caption": "Meal and end-of-day reminders to keep the streak going",
+        "w": 1331,
+        "h": 940,
+        "group": "Settings"
+      }
+    ],
+    "role": [
+      "Founder",
+      "Product Designer",
+      "Full-stack Developer"
+    ],
+    "url": "https://aomly.app",
+    "slug": "aomly"
+  },
+  {
     "image": "images/Work/CFM.png",
-    "type": ["Web Development"],
+    "type": [
+      "Web Development"
+    ],
     "title": "Coding for Metaverse",
     "description": "Coding for metaverse is a online E-learning platform by CoSI lab and Depa collaboration.",
     "maindescription": "Coding for Metaverse represents a groundbreaking collaboration between CoSI Lab and Depa,\n\nestablishing an innovative e-learning platform that bridges the gap between traditional education and the metaverse.\n\nAs a Front-end Developer and UI/UX Designer on this project, I played a crucial role in creating an intuitive and engaging user interface that makes complex technological concepts accessible to learners of all levels. The platform features interactive learning modules, real-time collaboration tools, and a responsive design that adapts seamlessly across devices.\n\nKey Contributions:\n• Developed responsive and interactive user interfaces using modern web technologies\n• Designed intuitive navigation and learning pathways for optimal user experience\n• Implemented real-time collaboration features to enhance student engagement\n• Created visually appealing layouts that maintain consistency with brand guidelines\n\nThis project represents a significant step forward in educational technology, providing students with the tools and knowledge they need to succeed in the emerging metaverse ecosystem.",
-    "role": ["Font-end developer", "UI/UX Design"],
+    "role": [
+      "Front-end developer",
+      "UI/UX Design"
+    ],
     "url": "https://codingformetaverse.com/",
     "slug": "coding-for-metaverse"
   },
   {
     "image": "images/Work/MLSA.png",
-    "type": ["Microsoft", "Student Ambassador"],
+    "type": [
+      "Microsoft",
+      "Student Ambassador"
+    ],
     "title": "Microsoft Learn Student Ambassador",
     "description": "MLSA is a program by Microsoft to help student to learn and grow in technology field.",
     "maindescription": "As a Microsoft Learn Student Ambassador, I've embarked on an enriching journey that combines leadership, technology advocacy, and community building. This prestigious program has provided me with unique opportunities to bridge the gap between students and cutting-edge technology.\n\nKey Responsibilities:\n• Organizing and leading technical workshops and training sessions\n• Mentoring fellow students in various Microsoft technologies\n• Building a community of tech enthusiasts on campus\n• Representing Microsoft at educational events\n\nAchievements:\n• Successfully organized multiple coding workshops reaching over 100 students\n• Developed and delivered presentations on cloud computing and AI\n• Created a supportive network of aspiring developers\n\nThis role has not only enhanced my technical skills but also developed my abilities in public speaking, event management, and community leadership. It's been incredibly rewarding to help other students discover and pursue their passion for technology.",
-    "role": ["Student", "Student Ambassador"],
+    "role": [
+      "Student",
+      "Student Ambassador"
+    ],
     "url": "https://mvp.microsoft.com/en-US/studentambassadors/profile/f7f6c0fc-bffc-417e-808a-4f97e00313c5",
     "slug": "microsoft-learn-student-ambassador"
   },
   {
     "image": "images/buride-application.png",
-    "type": ["UX/UI Design"],
+    "type": [
+      "UX/UI Design"
+    ],
     "title": "Buride Application",
     "description": "Concept UX-UI designs : Buride Application",
     "maindescription": "Buride is application for renting scooters and bicycle to go around in the campus for students of Bangkok University. ",
-    "role": ["Project owner", "UX/UI Designer"],
+    "role": [
+      "Project owner",
+      "UX/UI Designer"
+    ],
     "url": "https://www.figma.com/file/Vf5umQiq41R7YFUQPoD5i1/Buride?node-id=0%3A1&t=6R6CA4ZAUyJQDpET-1",
     "slug": "buride-application"
   },
   {
     "image": "images/Takeaway-img.png",
-    "type": ["UX/UI Design"],
+    "type": [
+      "UX/UI Design"
+    ],
     "title": "Takeaway Application",
     "description": "Concept UX-UI designs : Takeaway Application",
     "maindescription": "Takeaway is application for ordering food and drinks",
-    "role": ["Project owner", "UX/UI Designer"],
+    "role": [
+      "Project owner",
+      "UX/UI Designer"
+    ],
     "url": "https://www.figma.com/design/wWhzAJILJc2uDeE6y6f71E/Takeaway?node-id=0-1&t=3RRY2iYi4EiiUjio-1",
     "slug": "takeaway-application"
   },
   {
     "image": "images/Work/pypathway.jpg",
-    "type": ["Workshop"],
+    "type": [
+      "Workshop"
+    ],
     "title": "Python Developer Pathway Be Inspired session workshop by MLSA",
     "description": "let's learn and grow in technology field together.",
     "maindescription": "The Python Developer Pathway Be Inspired session marked a significant milestone in our educational outreach efforts at Bangkok University's Open House. As both host and speaker, I had the privilege of introducing aspiring developers to the world of Python programming.\n\nWorkshop Highlights:\n• Comprehensive introduction to Python programming fundamentals\n• Interactive coding demonstrations and hands-on exercises\n• Overview of the Microsoft Learn Student Ambassador program\n• Real-world application examples and career guidance\n\nThe session was designed to inspire first-year students and demonstrate how Python can be a gateway to various technology careers. We focused on creating an engaging learning environment where students could ask questions, experiment with code, and gain practical insights into software development.\n\nThe enthusiastic response from participants and their eagerness to learn made this workshop particularly rewarding. It reinforced the importance of peer-to-peer learning in technology education.",
-    "role": ["Speaker", "Teacher Assistant"],
+    "role": [
+      "Speaker",
+      "Teacher Assistant"
+    ],
     "url": "https://codingformetaverse.com/",
     "slug": "python-developer-pathway-workshop"
   },
   {
     "image": "images/Work/Workta.jpg",
-    "type": ["Workshop"],
+    "type": [
+      "Workshop"
+    ],
     "title": "Python Developer Pathway (The First Chapter : Be Inspired)",
     "description": "This event is tailored for first-year students who are passionate about coding, marking the exciting beginning of their coding journey.",
     "maindescription": "The First Chapter of the Python Developer Pathway represents our inaugural effort to introduce first-year students to the world of programming. This carefully crafted workshop series was designed to make coding accessible and exciting for beginners.\n\nProgram Structure:\n• Introduction to programming concepts and Python basics\n• Interactive coding sessions with real-time feedback\n• Problem-solving exercises and group projects\n• Career guidance and industry insights\n\nAs a Teaching Assistant, I worked closely with students to:\n• Provide one-on-one support during practical sessions\n• Help troubleshoot code and explain complex concepts\n• Create a supportive learning environment\n• Encourage collaboration and peer learning\n\nThe success of this first chapter has laid a strong foundation for future workshops and demonstrated the importance of early exposure to programming concepts in technology education.",
-    "role": ["Teaching Assistant"],
+    "role": [
+      "Teaching Assistant"
+    ],
     "url": "https://codingformetaverse.com/",
     "slug": "python-developer-pathway-first-chapter"
   },
   {
     "image": "images/Work/Kit.jpg",
-    "type": ["Student exchange"],
+    "type": [
+      "Student exchange"
+    ],
     "title": "BUxKAIT 2024",
     "description": "This is a student exchange program between Bangkok University and Kanagawa Institute of Technology.",
     "maindescription": "The BUxKAIT 2024 exchange program fostered invaluable cultural and academic exchange between Bangkok University and Kanagawa Institute of Technology. As a Student Assistant and Buddy, I played a key role in facilitating this international collaboration.\n\nProgram Highlights:\n• Cultural exchange activities and workshops\n• Joint academic projects and research discussions\n• Sports and team-building exercises\n• Local exploration and cultural immersion\n\nKey Responsibilities:\n• Providing guidance and support to exchange students\n• Organizing daily activities and cultural experiences\n• Facilitating communication between students and faculty\n• Creating an inclusive and welcoming environment\n\nThis month-long program not only strengthened international ties but also provided participants with unique perspectives on different educational approaches and cultural practices. The friendships formed and knowledge shared during this exchange will have lasting impacts on all participants' academic and personal growth.",
-    "role": ["Student Assistant", "Buddy"],
+    "role": [
+      "Student Assistant",
+      "Buddy"
+    ],
     "url": "https://codingformetaverse.com/",
     "slug": "buxkait-2024"
   },
   {
     "image": "images/Work/S__74948618.jpg",
-    "type": ["Workshop"],
+    "type": [
+      "Workshop"
+    ],
     "title": "BU Open House 2024",
     "description": "BU Open House 2024 workshop on full-stack web development",
     "maindescription": "At the BU Open House 2024, I had the honor of leading a comprehensive workshop on full-stack web development, sharing insights gained from my experience in front-end development with the next generation of developers.\n\nWorkshop Content:\n• Introduction to modern web development technologies\n• Hands-on coding sessions with practical examples\n• Best practices in full-stack development\n• Career opportunities in web development\n\nAs both host and speaker, I focused on:\n• Delivering engaging presentations on web development concepts\n• Demonstrating real-world applications and use cases\n• Providing guidance on learning pathways\n• Answering questions about the industry and career development\n\nThe workshop's success was made possible through collaboration with dedicated professors, organizing team members, and fellow speakers. The enthusiasm and engagement from participants reinforced the importance of practical, hands-on learning in technology education.\n\nThis experience not only allowed me to give back to the academic community but also strengthened my own understanding of educational outreach and technical communication.",
-    "role": ["Speaker", "Teacher Assistant"],
+    "role": [
+      "Speaker",
+      "Teacher Assistant"
+    ],
     "url": "https://www.linkedin.com/feed/update/urn:li:activity:7236725261797314561/",
     "slug": "bu-open-house-2024"
   }

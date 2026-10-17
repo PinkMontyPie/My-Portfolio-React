@@ -1,27 +1,39 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import PhotoCarousel from "./PhotoCarousel";
 
 const AboutPage = () => {
   const Social = [
     {
+      name: "GitHub",
       label: faGithub,
       url: "https://github.com/PinkMontyPie",
     },
     {
+      name: "LinkedIn",
       label: faLinkedin,
       url: "https://www.linkedin.com/in/pinkmontypie/",
     },
+  ];
+
+  const Highlights = [
     {
-      label: faFacebook,
-      url: "https://www.facebook.com/profile.php?id=100009782250843",
+      title: "Product Engineer @ HDmall",
+      detail: "Building healthcare products since 2024",
+    },
+    {
+      title: "Founder, CoDev Community",
+      detail: "Bringing students together to learn and build",
+    },
+    {
+      title: "Speaker & Host",
+      detail: "Global AI Bootcamp, Global Azure, JavaScript Bangkok",
     },
   ];
 
@@ -31,90 +43,67 @@ const AboutPage = () => {
     "/images/img1.jpg",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [fade, setFade] = useState<boolean>(true); // State to manage the fade effect
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false); // Trigger fade-out
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setFade(true); // Trigger fade-in after image change
-      }, 500); // Set this to half of the transition duration to ensure a smooth fade
-    }, 10000); // Change image every 10 seconds
-
-    return () => clearInterval(interval); // Clear interval on component unmount
-  }, []);
-
-  // Optional handler for manually navigating images
-  const goToImage = (index: number) => {
-    setFade(false); // Trigger fade-out
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setFade(true); // Trigger fade-in after image change
-    }, 500);
-  };
 
   return (
-    <main className="font-line-bold text-black h-auto bg-slate-100">
-      <div className="container animate-class pt-[120px]">
+    <main className="font-line-bold text-[var(--ink)] h-auto">
+      <div className="container animate-class section">
         <div className="flex flex-col justify-center items-center gap-10">
-          <div className="bg-gradient-to-r from-[#dff1ff] to-[#FCEBEF] text-[#2d2d2d] rounded-full px-5 py-2 font-line-bold text-[20px] animate-class delay-300">
-            About me 👀
-          </div>
-          <div className="font-line-bold text-[30px] lg:text-[40px]">
-            let&apos;s Get in touch!
-          </div>
-          <div className="bg-gradient-to-br from-[#dff1ff] to-[#FCEBEF] p-8 lg:p-10 lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-20 rounded-3xl w-full animate-class">
-            <div className="flex flex-col justify-center items-start animate-class delay-2">
-              <h1 className="font-line-bold text-3xl">Hi I&apos;m Pai👋</h1>
-              <p className="font-line-Regular text-base pt-3 pb-10 leading-loose">
-                i&apos;m a <strong>Front-end developer / UX/UI Designer</strong>{" "}
-                living in <strong>Bangkok, Thailand.</strong>
-                <br />
-                I&apos;m also a{" "}
-                <strong>Microsoft Learn Student Ambassador.</strong> <br />
-                <strong>My passion?</strong> Becoming a skilled full-stack
-                developer!
-                <br />
-                So please{" "}
-                <strong>don&apos;t hesitate to reach out to me!</strong>
+          <div className="section-pill">About</div>
+          <h2 className="section-title">Get to know me</h2>
+          <div className="cozy-card p-4 sm:p-8 lg:p-14 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-6 sm:gap-12 lg:gap-16 w-full animate-class">
+            <div className="flex flex-col justify-center items-start gap-5 sm:gap-6 px-1 sm:px-0 animate-class delay-2">
+              <div className="flex flex-col gap-2">
+                <h1 className="font-line-bold text-3xl lg:text-4xl">
+                  Hi I&apos;m Pai👋
+                </h1>
+                <p className="font-line-Regular text-[var(--ink-soft)]">
+                  Product Engineer · Front-end developer · UX/UI Designer
+                  <span className="block pt-1">Bangkok, Thailand</span>
+                </p>
+              </div>
+              <p className="font-line-Regular text-base leading-relaxed sm:leading-loose max-w-[560px]">
+                I design and build user-focused digital experiences that
+                balance aesthetics with performance, turning complex ideas into{" "}
+                <strong>intuitive interfaces</strong> and{" "}
+                <strong>clean, scalable design systems.</strong>
               </p>
-              <div className="flex gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 w-full">
+                {Highlights.map((item) => (
+                  <div
+                    key={item.title}
+                    className="cozy-inset px-4 py-3 sm:p-4 flex flex-row sm:flex-col items-center sm:items-start gap-3 sm:gap-1"
+                  >
+                    <span className="flex flex-col gap-0.5 min-w-0">
+                      <span className="font-line-bold text-sm">{item.title}</span>
+                      <span className="font-line-Regular text-xs text-[var(--ink-soft)] leading-relaxed">
+                        {item.detail}
+                      </span>
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
                 {Social.map((option, index) => (
-                  <Link href={option.url} key={index}>
-                    <h1 className="text-xl cursor-pointer hover:scale-105 transition-all">
-                      <FontAwesomeIcon
-                        icon={option.label}
-                        style={{ color: "#293144" }}
-                      />
-                    </h1>
+                  <Link
+                    href={option.url}
+                    key={index}
+                    target="_blank"
+                    aria-label={option.name}
+                    className="cozy-btn w-11 h-11 flex justify-center items-center text-lg"
+                  >
+                    <FontAwesomeIcon
+                      icon={option.label}
+                      style={{ color: "var(--ink)" }}
+                    />
                   </Link>
                 ))}
+                <span className="font-line-Regular text-sm text-[var(--ink-soft)] sm:pl-2 w-full sm:w-auto">
+                  Don&apos;t hesitate to reach out to me!
+                </span>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
-              <div className="relative">
-                <img
-                  src={images[currentIndex]}
-                  alt={`profile image ${currentIndex + 1}`}
-                  className={`w-[400px] h-[500px] object-cover rounded-3xl image-transition ${
-                    fade ? "show" : ""
-                  }`}
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex flex-row lg:flex-col gap-3">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToImage(index)}
-                    className={`w-3 h-3 rounded-full mx-1 ${
-                      index === currentIndex ? "bg-black" : "bg-gray-400"
-                    }`}
-                  />
-                ))}
-              </div>
+            <div className="order-first lg:order-none flex justify-center">
+              <PhotoCarousel images={images} alt="Photo of Pai" />
             </div>
           </div>
         </div>

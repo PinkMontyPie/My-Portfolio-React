@@ -22,15 +22,18 @@ const config: Config = {
       },
 
       fontFamily: {
-        'line-Thin': ['LINESeed_Thin', 'sans-serif'],
-        'line-Regular': ['LINESeed_Regular', 'sans-serif'],
-        'line-bold': ['LINESeed_Bold', 'sans-serif'],
-        'line-ExtraBold': ['LINESeed_ExtraBold', 'sans-serif'],
-        'line-Hevy': ['LINESeed_Hevy', 'sans-serif'],
+        // Rounded Latin faces for the beach look; LINE Seed still picks up Thai glyphs
+        'line-Thin': ['var(--font-fredoka)', 'LINESeed_Thin', 'sans-serif'],
+        'line-Regular': ['var(--font-fredoka)', 'LINESeed_Regular', 'sans-serif'],
+        'line-bold': ['var(--font-fredoka)', 'LINESeed_Bold', 'sans-serif'],
+        'line-ExtraBold': ['var(--font-fredoka)', 'LINESeed_ExtraBold', 'sans-serif'],
+        'line-Hevy': ['var(--font-fredoka)', 'LINESeed_Hevy', 'sans-serif'],
       },
 
     },
   },
   plugins: [require("daisyui")],
+  // The beach theme is light only; without this daisyUI turns the page dark with the OS
+  daisyui: { themes: ["light"] },
 }
 export default config

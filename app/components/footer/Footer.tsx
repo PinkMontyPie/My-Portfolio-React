@@ -1,11 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
@@ -14,84 +12,78 @@ const Footer = () => {
   const nav = [
     {
       label: "About",
-      url: "#about",
+      url: "/#about",
+    },
+    {
+      label: "Experience",
+      url: "/#experience",
     },
     {
       label: "Skills",
-      url: "#skills",
+      url: "/#skills",
     },
     {
       label: "Works",
-      url: "#works",
+      url: "/#works",
     },
     {
       label: "Contact",
-      url: "#contact",
+      url: "/#contact",
     },
   ];
 
   const Social = [
     {
+      name: "GitHub",
       label: faGithub,
       url: "https://github.com/PinkMontyPie",
     },
     {
+      name: "LinkedIn",
       label: faLinkedin,
       url: "https://www.linkedin.com/in/pinkmontypie/",
-    },
-    {
-      label: faFacebook,
-      url: "https://www.facebook.com/profile.php?id=100009782250843",
     },
   ];
 
   return (
-    <footer>
-      <div className="w-full h-auto bg-slate-200">
-        <div className="container flex flex-col">
-          <div className="flex justify-between items-center pt-10">
-            <div>
-              <div className="relative w-auto h-7 lg:h-9">
-                <Image
-                  src="/icon/logo.png"
-                  alt="logo"
-                  width={100}
-                  height={36}
-                  className="w-auto h-7 lg:h-9"
-                  priority
-                />
-              </div>
-              <div className="pt-1 lg:pt-2 flex gap-3">
-                {Social.map((option, index) => (
-                  <Link href={option.url} key={index}>
-                    <h1 className="text-xl cursor-pointer">
-                      <FontAwesomeIcon
-                        icon={option.label}
-                        style={{ color: "#293144" }}
-                      />
-                    </h1>
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="flex">
-              <div className="flex flex-col md:flex-row gap-3">
-                {nav.map((option, index) => (
-                  <Link href={option.url} key={index}>
-                    <h1 className="text-xs lg:text-base text-[#293144] cursor-pointer hover:underline">
-                      {option.label}
-                    </h1>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="divider"></div>
-          <div className="pb-8">
-            <h1 className="text-xs lg:text-base">
-              © 2024 PortPai. All rights reserved.
-            </h1>
-          </div>
+    <footer className="container font-line-Regular pb-16">
+      <div className="cozy-card flex flex-col gap-4 px-6 py-5 text-[.85rem] text-[var(--ink-soft)] md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-3">
+          <Image
+            src="/icon/logo.png"
+            alt="PortPai"
+            width={100}
+            height={36}
+            className="w-auto h-6"
+          />
+          <p className="m-0">
+            © {new Date().getFullYear()} Soravith (Pai) Puvekit. All rights
+            reserved.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-x-5">
+          {nav.map((option) => (
+            <Link
+              href={option.url}
+              key={option.label}
+              className="press inline-flex h-11 items-center rounded-full font-line-bold text-[var(--ink)] hover:text-[var(--accent-deep)]"
+            >
+              {option.label}
+            </Link>
+          ))}
+          <span className="flex items-center gap-1">
+            {Social.map((option) => (
+              <Link
+                href={option.url}
+                key={option.name}
+                target="_blank"
+                aria-label={option.name}
+                className="cozy-btn grid h-10 w-10 place-items-center !bg-[var(--cream)]"
+              >
+                <FontAwesomeIcon icon={option.label} />
+              </Link>
+            ))}
+          </span>
         </div>
       </div>
     </footer>
